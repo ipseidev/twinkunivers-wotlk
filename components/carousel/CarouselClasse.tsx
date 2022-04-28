@@ -28,38 +28,56 @@ const CarouselClasse = () => {
                         delay: 1500
                     }}
 
-                    spaceBetween={50}
                     slidesPerView={6}
                     onSlideChange={() => console.log('slide change')}
                     onSwiper={(swiper) => console.log(swiper)}
                     style={{height: "100%"}}
                 >
                     <SwiperSlide className={"swiper_item"}>
-                        <Image src={MageIcon} width={100} height={100} alt={'mage'}/>
+                        <div className={"swiper_image_container"}>
+                            <Image src={MageIcon} width={100} height={100} alt={'mage'}
+                                   className={"swiper_image_classe"}/>
+                        </div>
                     </SwiperSlide>
                     <SwiperSlide className={"swiper_item"}>
-                        <Image src={DemoIcon} width={100} height={100} alt={'mage'}/>
+                        <div className={"swiper_image_container"}>
+                            <Image src={DemoIcon} width={100} height={100} alt={'mage'}     className={"swiper_image_classe"}/>
+                        </div>
                     </SwiperSlide>
                     <SwiperSlide className={"swiper_item"}>
-                        <Image src={PriestIcon} width={100} height={100} alt={'mage'}/>
+                        <div className={"swiper_image_container"}>
+                            <Image src={PriestIcon} width={100} height={100} alt={'mage'}     className={"swiper_image_classe"}/>
+                        </div>
                     </SwiperSlide>
                     <SwiperSlide className={"swiper_item"}>
-                        <Image src={WarIcon} width={100} height={100} alt={'mage'}/>
+                        <div className={"swiper_image_container"}>
+                            <Image src={WarIcon} width={100} height={100} alt={'mage'}     className={"swiper_image_classe"}/>
+                        </div>
                     </SwiperSlide>
                     <SwiperSlide className={"swiper_item"}>
-                        <Image src={PaladinIcon} width={100} height={100} alt={'mage'}/>
+                        <div className={"swiper_image_container"}>
+                            <Image src={PaladinIcon} width={100} height={100} alt={'mage'}     className={"swiper_image_classe"}/>
+                        </div>
                     </SwiperSlide>
                     <SwiperSlide className={"swiper_item"}>
-                        <Image src={RogueIcon} width={100} height={100} alt={'mage'}/>
+                        <div className={"swiper_image_container"}>
+                            <Image src={RogueIcon} width={100} height={100} alt={'mage'}     className={"swiper_image_classe"}/>
+                        </div>
                     </SwiperSlide>
                     <SwiperSlide className={"swiper_item"}>
-                        <Image src={HunterIcon} width={100} height={100} alt={'mage'}/>
+                        <div className={"swiper_image_container"}>
+                            <Image src={HunterIcon} width={100} height={100} alt={'mage'}     className={"swiper_image_classe"}/>
+                        </div>
                     </SwiperSlide>
                     <SwiperSlide className={"swiper_item"}>
-                        <Image src={DruidIcon} width={100} height={100} alt={'mage'}/>
+                        <div className={"swiper_image_container"}>
+                            <Image src={DruidIcon} width={100} height={100} alt={'mage'}     className={"swiper_image_classe"}/>
+                        </div>
                     </SwiperSlide>
                     <SwiperSlide className={"swiper_item"}>
-                        <Image src={ShamanIcon} width={100} height={100} alt={'mage'}/>
+                        <div className={"swiper_image_container"}>
+                            <Image src={ShamanIcon} width={100} height={100} alt={'mage'}     className={"swiper_image_classe"}/>
+                        </div>
                     </SwiperSlide>
                 </Swiper>
             </div>

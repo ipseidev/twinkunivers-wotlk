@@ -22,7 +22,5 @@ L
 styles/components/index.scss,a/6/a6998e75716847d0d525a51011f4b9781cb08442
 A
 styles/index.scss,0/a/0a7831a13f944128d6b88fadd547aac66f470fc1
-K
-components/navbar/index.tsx,6/e/6e65188de81c60d43c1a6d251471da168ef50c94
-M
-styles/components/navbar.scss,3/5/350782fef052743d4730ac39ba351e5d24d30533
+>
+pages/_app.tsx,5/5/550528cc072fa7d76d123e2f4303d4ab39daa8e8
