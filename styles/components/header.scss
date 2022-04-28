@@ -1,0 +1,43 @@
+.homepage_header{
+  width: 100%;
+  height: 100Vh;
+  position: relative;
+
+  .homepage_header_background{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),url("../../assets/images/background.png");
+    background-position: top;
+    background-size: cover;
+  }
+
+}
+
+.carousel_classe_container{
+  width: 100%;
+  height: 145px;
+  background-image: url(https://playerx.qodeinteractive.com/wp-content/uploads/2018/06/p3-background-img-1.jpg);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .carousel_classe {
+    width: 50%;
+    height: 100%;
+  }
+
+
+}
+.swiper_item{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
