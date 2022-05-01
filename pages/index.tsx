@@ -1,6 +1,6 @@
 import React from "react";
 import type {NextPage} from 'next'
-import { useRouter } from 'next/router'
+import {useRouter} from 'next/router'
 
 import {gql} from "@apollo/client";
 import client from "../appolo-client";
@@ -34,23 +34,23 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
     }
 
 
-    const setClasseActiveAndSetQuery = async (id:number) => {
+    const setClasseActiveAndSetQuery = async (id: number) => {
         setClasseActive(id);
         router.query.classe = `${id}`;
-        await router.push(router, router, {shallow:true});
+        await router.push(router, router, {shallow: true});
     }
 
 
-    const setClasseFactionAndSetQuery = async (id:number) => {
+    const setClasseFactionAndSetQuery = async (id: number) => {
         setFactionActive(id);
         router.query.faction = `${id}`;
-        await router.push(router, router, {shallow:true});
+        await router.push(router, router, {shallow: true});
     }
 
-    const setBuildActifAndSetQuery = async (id:number) => {
+    const setBuildActifAndSetQuery = async (id: number) => {
         setIdBuildActif(id);
         router.query.build = `${id}`;
-        await router.push(router, router, {shallow:true});
+        await router.push(router, router, {shallow: true});
     }
 
     return (
@@ -67,7 +67,8 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
                         <h3 style={{color: "#144165", fontSize: "2rem", textShadow: "3px 3px 3px black"}}>WOTLK
                             edition</h3>
                     </div>
-                    <CarouselClasse classes={classes} selectClasse={setClasseActiveAndSetQuery} classeActive={classeActive}/>
+                    <CarouselClasse classes={classes} selectClasse={setClasseActiveAndSetQuery}
+                                    classeActive={classeActive}/>
 
                 </div>
             </header>
@@ -114,6 +115,12 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
                 </section>
                 <section>
                     texte
+
+                    {
+                        guide &&
+                        <div dangerouslySetInnerHTML={{__html: guide.classe.data.attributes.horde}}/>
+                    }
+
                 </section>
             </main>
         </main>
