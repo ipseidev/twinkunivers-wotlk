@@ -108,6 +108,11 @@
 
       }
     }
+    .swiper_image_classe-active{
+      filter: grayscale(0);
+      transform: scale(1.1);
+    }
+
 
   }
 }

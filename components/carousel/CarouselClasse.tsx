@@ -7,17 +7,10 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 
 import MageIcon from "../../assets/images/mage.png"
-import DemoIcon from "../../assets/images/warlock.png"
-import PriestIcon from "../../assets/images/priest.png"
-import WarIcon from "../../assets/images/warrior.png"
-import PaladinIcon from "../../assets/images/paladin.png"
-import RogueIcon from "../../assets/images/rogue.png"
-import ShamanIcon from "../../assets/images/shaman.png"
-import HunterIcon from "../../assets/images/hunter.png"
-import DruidIcon from "../../assets/images/druid.png"
 import {Autoplay} from "swiper";
+import clsx from "clsx";
 
-const CarouselClasse = () => {
+const CarouselClasse = ({classes, selectClasse, classeActive}: any) => {
     return (
         <section className={"carousel_classe_container"}>
             <div className={"carousel_classe"}>
@@ -33,52 +26,20 @@ const CarouselClasse = () => {
                     onSwiper={(swiper) => console.log(swiper)}
                     style={{height: "100%"}}
                 >
-                    <SwiperSlide className={"swiper_item"}>
-                        <div className={"swiper_image_container"}>
-                            <Image src={MageIcon} width={100} height={100} alt={'mage'}
-                                   className={"swiper_image_classe"}/>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className={"swiper_item"}>
-                        <div className={"swiper_image_container"}>
-                            <Image src={DemoIcon} width={100} height={100} alt={'mage'}     className={"swiper_image_classe"}/>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className={"swiper_item"}>
-                        <div className={"swiper_image_container"}>
-                            <Image src={PriestIcon} width={100} height={100} alt={'mage'}     className={"swiper_image_classe"}/>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className={"swiper_item"}>
-                        <div className={"swiper_image_container"}>
-                            <Image src={WarIcon} width={100} height={100} alt={'mage'}     className={"swiper_image_classe"}/>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className={"swiper_item"}>
-                        <div className={"swiper_image_container"}>
-                            <Image src={PaladinIcon} width={100} height={100} alt={'mage'}     className={"swiper_image_classe"}/>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className={"swiper_item"}>
-                        <div className={"swiper_image_container"}>
-                            <Image src={RogueIcon} width={100} height={100} alt={'mage'}     className={"swiper_image_classe"}/>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className={"swiper_item"}>
-                        <div className={"swiper_image_container"}>
-                            <Image src={HunterIcon} width={100} height={100} alt={'mage'}     className={"swiper_image_classe"}/>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className={"swiper_item"}>
-                        <div className={"swiper_image_container"}>
-                            <Image src={DruidIcon} width={100} height={100} alt={'mage'}     className={"swiper_image_classe"}/>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className={"swiper_item"}>
-                        <div className={"swiper_image_container"}>
-                            <Image src={ShamanIcon} width={100} height={100} alt={'mage'}     className={"swiper_image_classe"}/>
-                        </div>
-                    </SwiperSlide>
+                    {
+                        classes.map((classe: any) => {
+                            return (
+                                <SwiperSlide className={"swiper_item"} key={classe.id} onClick={() => selectClasse(classe.id)}>
+                                    <div className={"swiper_image_container"}>
+                                        <Image src={classe.attributes.icon.data.attributes.url} width={100} height={100} alt={classe.attributes.classe}
+                                               className={clsx("swiper_image_classe", classeActive === classe.id && "swiper_image_classe-active")}/>
+                                    </div>
+                                </SwiperSlide>
+                            )
+                        })
+                    }
+
+
                 </Swiper>
             </div>
         </section>

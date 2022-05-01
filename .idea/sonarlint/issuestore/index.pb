@@ -12,12 +12,6 @@ A
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
-B
-styles/global.scss,8/5/85ab6bf5b9f989d1749e5a753cf5db54e4b291f0
-=
-next-env.d.ts,7/9/7948598afd6f2aa542f1b55d7b6f077a70937e77
->
-next.config.js,8/1/811a6d5a2e04fadb44d8eec365f2fa8af5c4facf
 L
 styles/components/index.scss,a/6/a6998e75716847d0d525a51011f4b9781cb08442
 A
