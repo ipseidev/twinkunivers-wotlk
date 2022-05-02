@@ -5,16 +5,16 @@ import "../styles/index.scss";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
       <>
-        <script
+        <Script
             src="https://www.erosmosis.fr/test2.js?lang=fr"
         />
-        <script
+        <Script
             id="show-banner"
             dangerouslySetInnerHTML={{
               __html: `var aowow_tooltips = { 'colorlinks': true, 'iconizelinks': true, 'renamelinks':true }`,
             }}
         />
-        <script
+        <Script
             src="https://www.erosmosis.fr/locale_frfr.js"
         />
         <Script
