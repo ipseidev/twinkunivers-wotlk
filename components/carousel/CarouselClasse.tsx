@@ -22,8 +22,6 @@ const CarouselClasse = ({classes, selectClasse, classeActive}: any) => {
                     }}
 
                     slidesPerView={6}
-                    onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)}
                     style={{height: "100%"}}
                 >
                     {

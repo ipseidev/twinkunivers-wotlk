@@ -16,5 +16,15 @@ L
 styles/components/index.scss,a/6/a6998e75716847d0d525a51011f4b9781cb08442
 A
 styles/index.scss,0/a/0a7831a13f944128d6b88fadd547aac66f470fc1
->
-pages/_app.tsx,5/5/550528cc072fa7d76d123e2f4303d4ab39daa8e8
+K
+components/footer/index.tsx,a/f/af3ac286ddf5c2323f7b45d57e113c8b784270b7
+K
+components/layout/index.tsx,5/1/5114ea96b2c895afa99073b7b0d8535df2a38af0
+H
+components/seo/index.tsx,1/4/14cb0f8a399b6ff0edf8a61f878b61008d6ed7ae
+K
+components/navbar/index.tsx,6/e/6e65188de81c60d43c1a6d251471da168ef50c94
+M
+styles/components/navbar.scss,3/5/350782fef052743d4730ac39ba351e5d24d30533
+<
+package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
