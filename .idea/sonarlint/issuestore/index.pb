@@ -28,3 +28,23 @@ M
 styles/components/navbar.scss,3/5/350782fef052743d4730ac39ba351e5d24d30533
 <
 package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
+M
+styles/components/header.scss,6/a/6af8874f783e8ac883f90e838d9a6eefb5fcec44
+=
+next-env.d.ts,7/9/7948598afd6f2aa542f1b55d7b6f077a70937e77
+>
+next.config.js,8/1/811a6d5a2e04fadb44d8eec365f2fa8af5c4facf
+@
+appolo-client.ts,4/d/4d63793e8ef16fec3cb7d088de5c94ab43a654c6
+K
+styles/components/font.scss,f/9/f9b6c30f99ee89195bd12fbcf2a1e1da035b581b
+V
+&components/carousel/CarouselClasse.tsx,e/3/e3c2adcfd7d684094ee9a5015044ac0647ad26bb
+Q
+!components/build/BuildSection.tsx,7/e/7edde2a98d0fa25f2bc2770899ee19d75a9c5874
+U
+%components/faction/FactionSection.tsx,f/1/f1680354d29c8d9b683369e33cfc6aff73a12596
+]
+-components/textContent/TextContentSection.tsx,6/7/67c641085a4c5821329941a0998620aaa144b4eb
+L
+components/header/Header.tsx,6/a/6abb79180f4ff353b84d81b874346968b33d46b8
