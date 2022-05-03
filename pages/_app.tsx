@@ -1,6 +1,10 @@
 import type { AppProps } from 'next/app'
 import Script from "next/script";
 import "../styles/index.scss";
+// Import Swiper styles
+import 'swiper/scss';
+import 'swiper/scss/navigation';
+import 'swiper/scss/pagination';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

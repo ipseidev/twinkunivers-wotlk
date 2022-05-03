@@ -2,7 +2,7 @@ import React from 'react';
 import Image from "next/image";
 import clsx from "clsx";
 
-const FactionSection = ({classeActive, factions, setClasseFactionAndSetQuery}: any) => {
+const FactionSection = ({classeActive, factions, setClasseFactionAndSetQuery, factionActive}: any) => {
     return (
         <section className={"faction_content_container"}>
             <h1>Faction</h1>
@@ -14,7 +14,7 @@ const FactionSection = ({classeActive, factions, setClasseFactionAndSetQuery}: a
                                  onClick={() => setClasseFactionAndSetQuery(faction.id)}>
                                 <Image src={faction.attributes.icon.data.attributes.url} width={100}
                                        height={100} alt={faction.attributes.faction}
-                                       className={clsx("swiper_image_classe")}/>
+                                       className={clsx("image_faction", (factionActive !== 0 && factionActive !== faction.id) && "image_faction-disable")}/>
                             </div>
                         )
                     })

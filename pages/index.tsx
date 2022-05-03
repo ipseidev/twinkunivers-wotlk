@@ -38,6 +38,11 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
         }
     })
 
+    React.useEffect(() => {
+        if(idBuildActif === 0) {
+            setGuide('')
+        }
+    }, [idBuildActif])
 
 
     const getClasseName = () => {
@@ -76,12 +81,12 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
                     classeActive={classeActive}/>
             <main className={"content_container"}>
                 <section className={"classe_content_container"}>
-                    <h1 className={"text-center"}>{getClasseName()}</h1>
+                    <h1>{getClasseName()}</h1>
                 </section>
                 <FactionSection classeActive={classeActive} factions={factions}
-                                setClasseFactionAndSetQuery={setClasseFactionAndSetQuery}/>
+                                setClasseFactionAndSetQuery={setClasseFactionAndSetQuery} factionActive={factionActive}/>
                 <BuildSection classeActive={classeActive} factionActive={factionActive} guides={guides}
-                              setBuildActifAndSetQuery={setBuildActifAndSetQuery}/>
+                              setBuildActifAndSetQuery={setBuildActifAndSetQuery} idBuildActif={idBuildActif}/>
                 <StuffSection guide={guide}/>
                 <TextContentSection guide={guide}/>
             </main>
