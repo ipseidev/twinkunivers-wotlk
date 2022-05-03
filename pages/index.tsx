@@ -38,9 +38,7 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
         }
     })
 
-    React.useEffect(() => {
-      console.log(guides.length)
-    }, [])
+
 
     const getClasseName = () => {
         const classe = classes.filter((classe: any) => classe.id === classeActive);
