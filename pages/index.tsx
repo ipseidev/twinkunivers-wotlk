@@ -38,7 +38,9 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
         }
     })
 
-
+    React.useEffect(() => {
+      console.log(guides.length)
+    }, [])
 
     const getClasseName = () => {
         const classe = classes.filter((classe: any) => classe.id === classeActive);
@@ -68,7 +70,6 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
         router.query.build = `${id}`;
         await router.push(router, router, {shallow: true});
     }
-
 
     return (
         <main>

@@ -2,7 +2,7 @@ import {gql} from "@apollo/client";
 
 export const getGuides = gql`
     query guides {
-        guides{
+        guides(pagination: { start: 1, limit: 100 }){
             data{
                 id
                 attributes{
@@ -11,6 +11,7 @@ export const getGuides = gql`
                         data{
                             id,
                             attributes{
+                                classe,
                                 alliance,
                                 horde,
                                 alliance_horde,

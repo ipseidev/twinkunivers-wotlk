@@ -30,8 +30,6 @@ const StuffSection = ({guide}: any) => {
                                          commentaire={guide.main_gauche?.commentaire} side={"bottom"}/>
                             <StuffButton item={guide.distance?.item} enchant={guide.distance?.enchant}
                                          commentaire={guide.distance?.commentaire} side={"bottom"}/>
-
-
                         </div>
                         <div className={"stuff_right-container"}>
                             <StuffButton item={guide.gants?.item} enchant={guide.gants?.enchant}
