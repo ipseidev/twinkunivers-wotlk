@@ -26,7 +26,6 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
         if (build.length > 0) {
             setGuide(build[0].attributes)
         }
-
     }, [idBuildActif, guides])
 
     React.useEffect(() => {
@@ -43,6 +42,7 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
             setGuide('')
         }
     }, [idBuildActif])
+
 
 
     const getClasseName = () => {
@@ -88,7 +88,7 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
                 <BuildSection classeActive={classeActive} factionActive={factionActive} guides={guides}
                               setBuildActifAndSetQuery={setBuildActifAndSetQuery} idBuildActif={idBuildActif}/>
                 <StuffSection guide={guide}/>
-                <TextContentSection guide={guide}/>
+                <TextContentSection guide={guide} factionActive={factionActive}/>
             </main>
         </main>
     )
