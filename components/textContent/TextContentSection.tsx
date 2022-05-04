@@ -1,17 +1,17 @@
 import React from 'react';
 
-const TextContentSection = ({guide, factionActive}: {guide:any, factionActive:number}) => {
+const TextContentSection = ({guide, factionActive}: any) => {
     const [faction, setFaction] = React.useState('');
 
     React.useEffect(() => {
 
-        if(factionActive === 1 ){
+        if(parseInt(factionActive) === 1 ){
             setFaction("alliance")
         }
-        if(factionActive === 2){
+        if(parseInt(factionActive) === 2){
             setFaction("horde")
         }
-        if(factionActive === 3){
+        if(parseInt(factionActive) === 3){
             setFaction("alliance_horde")
         }
     }, [factionActive])

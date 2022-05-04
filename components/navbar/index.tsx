@@ -44,9 +44,8 @@ const Navbar = () => {
             <div className={'navbar_middle_container'}>
                 <div className={'navbar_middle_background_container'}>
                     <div className={'navbar_middle_logo_container'}>
-                        <a itemProp="url" href="https://playerx.qodeinteractive.com/" style={{height: 84}}>
+                        <a itemProp="url" href="" style={{height: 84}}>
                             <Image  src={"https://twinkunivers.com/wp-content/uploads/2021/07/cropped-LOGO.png"} width="100" height="100" alt="logo"/>
-
                         </a>
                     </div>
                 </div>

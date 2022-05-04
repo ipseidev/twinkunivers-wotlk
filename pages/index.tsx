@@ -12,6 +12,7 @@ import Header from "../components/header/Header";
 import {getClasses} from "../graphql/getClasses";
 import {getFactions} from "../graphql/getFactions";
 import {getGuides} from "../graphql/getGuides";
+import Footer from "../components/footer";
 
 const Home: NextPage = ({classes, factions, guides}: any) => {
     const router = useRouter();
@@ -43,6 +44,18 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
         }
     }, [idBuildActif])
 
+    React.useEffect(() => {
+        console.log("router =>", router.query)
+        if(router.query?.classe){
+            setClasseActiveAndSetQuery(router.query?.classe)
+        }
+        if(router.query?.faction){
+            setClasseFactionAndSetQuery(router.query?.faction)
+        }
+        if(router.query?.build){
+            setIdBuildActif(router.query?.build)
+        }
+    }, [])
 
 
     const getClasseName = () => {
@@ -90,6 +103,7 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
                 <StuffSection guide={guide}/>
                 <TextContentSection guide={guide} factionActive={factionActive}/>
             </main>
+            <Footer />
         </main>
     )
 }

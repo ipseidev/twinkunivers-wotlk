@@ -5,8 +5,6 @@ A
 public/vercel.svg,0/c/0c3567b3146da917779092b6952cf7aa844d3c76
 M
 styles/components/layout.scss,5/5/55839c233e3063173cce4d400ed9d792c1872d42
-M
-styles/components/footer.scss,b/d/bdc699d1ce8c10367ca6d513b4089d00ec00fe67
 A
 styles/reset.scss,8/4/8492e9e6551e6c7c68cdf494c4692c2524993a81
 :
@@ -17,13 +15,9 @@ L
 A
 styles/index.scss,0/a/0a7831a13f944128d6b88fadd547aac66f470fc1
 K
-components/footer/index.tsx,a/f/af3ac286ddf5c2323f7b45d57e113c8b784270b7
-K
 components/layout/index.tsx,5/1/5114ea96b2c895afa99073b7b0d8535df2a38af0
 H
 components/seo/index.tsx,1/4/14cb0f8a399b6ff0edf8a61f878b61008d6ed7ae
-K
-components/navbar/index.tsx,6/e/6e65188de81c60d43c1a6d251471da168ef50c94
 M
 styles/components/navbar.scss,3/5/350782fef052743d4730ac39ba351e5d24d30533
 <
@@ -36,8 +30,6 @@ M
 appolo-client.ts,4/d/4d63793e8ef16fec3cb7d088de5c94ab43a654c6
 K
 styles/components/font.scss,f/9/f9b6c30f99ee89195bd12fbcf2a1e1da035b581b
-L
-components/header/Header.tsx,6/a/6abb79180f4ff353b84d81b874346968b33d46b8
 P
  components/stuff/StuffButton.tsx,8/a/8a4a5324d254bd079c81064118a33cf89dd5884e
 U

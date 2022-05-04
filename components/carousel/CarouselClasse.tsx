@@ -9,6 +9,7 @@ import clsx from "clsx";
 SwiperCore.use([Navigation, Pagination]);
 
 const CarouselClasse = ({classes, selectClasse, classeActive}: any) => {
+    console.log(classeActive);
     return (
         <section className={"carousel_classe_container"}>
             <div className={"carousel_classe"}>
