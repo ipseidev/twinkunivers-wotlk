@@ -1,18 +1,51 @@
+//@ts-nocheck
+
 import React, {Fragment} from 'react';
 import {Popover, Transition} from '@headlessui/react'
 import {MdLiveHelp} from "react-icons/md"
 
 
 const StuffCommentaire = ({commentaire}: any) => {
+
+    const buttonRef = React.useRef(null)
+    const timeoutDuration = 200
+    let timeout: NodeJS.Timeout;
+
+    const closePopover = () => {
+        return buttonRef.current?.dispatchEvent(
+            new KeyboardEvent("keydown", {
+                key: "Escape",
+                bubbles: true,
+                cancelable: true
+            })
+        )
+    }
+
+    const onMouseEnter = (open: any) => {
+        clearTimeout(timeout)
+        if (open) return
+        return buttonRef.current?.click()
+    }
+
+    const onMouseLeave = (open: any) => {
+        if (!open) return
+        timeout = setTimeout(() => closePopover(), timeoutDuration)
+    }
+
     return (
+
         <div>
             <Popover className="relative">
                 {({open}) => (
                     <>
-                        <Popover.Button>
+                        <Popover.Button
+                            ref={buttonRef}
+                            onMouseEnter={onMouseEnter.bind(null, open)}
+                            onMouseLeave={onMouseLeave.bind(null, open)}
+                        >
                             <MdLiveHelp
                                 className={`${open ? '' : 'text-opacity-70'}
-                  ml-2 h-7 w-7 text-orange-300 transition duration-150 ease-in-out group-hover:text-opacity-80`}
+                  ml-2 h-7 w-7 text-emerald-200 transition duration-150 ease-in-out group-hover:text-opacity-80`}
                                 aria-hidden="true"
                             />
                         </Popover.Button>
