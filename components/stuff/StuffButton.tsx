@@ -9,7 +9,7 @@ const StuffButton = ({enchant, item, commentaire, side, ring1, ring2, bijou1, bi
                 return (
                     <div className={'stuff_item_container-left'}>
                         <div className={'stuff_item_details'}>
-                            {/*{commentaire && <StuffCommentaire commentaire={commentaire}/>}*/}
+                            {commentaire && <StuffCommentaire commentaire={commentaire}/>}
                             {enchant && <StuffImage item={enchant} size={'medium'}/>}
                         </div>
                         {<StuffImage item={item} size={'large'}/>}
@@ -20,7 +20,7 @@ const StuffButton = ({enchant, item, commentaire, side, ring1, ring2, bijou1, bi
                     <div className={'stuff_item_container-right'}>
                         {<StuffImage item={item} size={'large'}/>}
                         <div className={'stuff_item_details'}>
-                            {/*{commentaire && <StuffCommentaire commentaire={commentaire}/>}*/}
+                            {commentaire && <StuffCommentaire commentaire={commentaire}/>}
                             {enchant && <StuffImage item={enchant} size={'medium'}/>}
                         </div>
                     </div>)
@@ -29,7 +29,7 @@ const StuffButton = ({enchant, item, commentaire, side, ring1, ring2, bijou1, bi
                     <div className={'stuff_item_container-bottom'}>
                         <div className={'stuff_item_details'}>
                             {<StuffImage item={item} size={'large'}/>}
-                            {/*{commentaire && <StuffCommentaire commentaire={commentaire}/>}*/}
+                            {commentaire && <StuffCommentaire commentaire={commentaire}/>}
                         </div>
                         {enchant && <StuffImage item={enchant} size={'medium'}/>}
 

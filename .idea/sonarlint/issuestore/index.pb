@@ -18,8 +18,6 @@ K
 components/layout/index.tsx,5/1/5114ea96b2c895afa99073b7b0d8535df2a38af0
 H
 components/seo/index.tsx,1/4/14cb0f8a399b6ff0edf8a61f878b61008d6ed7ae
-M
-styles/components/navbar.scss,3/5/350782fef052743d4730ac39ba351e5d24d30533
 <
 package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
 =
@@ -30,13 +28,17 @@ M
 appolo-client.ts,4/d/4d63793e8ef16fec3cb7d088de5c94ab43a654c6
 K
 styles/components/font.scss,f/9/f9b6c30f99ee89195bd12fbcf2a1e1da035b581b
-P
- components/stuff/StuffButton.tsx,8/a/8a4a5324d254bd079c81064118a33cf89dd5884e
-U
-%components/stuff/StuffCommentaire.tsx,d/f/df9b804e5c2bc1668c53b4b423b8c49a24008763
 O
 components/stuff/StuffImage.tsx,7/4/74ce4b0e94bb782b97b054c49313f88f9f0a382e
 F
 graphql/getFactions.ts,b/8/b8878d4ae6fde2ba6f558956046c766f3c1b8fe0
 >
 .graphqlconfig,8/d/8df006246b7f5fae48a54734e35d9a2553dee9b6
+>
+pages/_app.tsx,5/5/550528cc072fa7d76d123e2f4303d4ab39daa8e8
+Q
+!components/build/BuildSection.tsx,7/e/7edde2a98d0fa25f2bc2770899ee19d75a9c5874
+U
+%components/faction/FactionSection.tsx,f/1/f1680354d29c8d9b683369e33cfc6aff73a12596
+D
+graphql/getGuides.ts,2/5/250ed321e6309c394d83bf3a50c77e5cf9f4ec44
