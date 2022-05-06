@@ -19,7 +19,7 @@ const CarouselClasse = ({classes, selectClasse, classeActive}: any) => {
                     pagination={{ clickable: true }}
                     onSwiper={(swiper) => console.log(swiper)}
                     onSlideChange={() => console.log('slide change')}
-                    slidesPerView={6}
+                    slidesPerView={9}
                     style={{height: "100%"}}
 
                 >

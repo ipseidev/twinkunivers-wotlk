@@ -5,7 +5,7 @@ import clsx from "clsx";
 const FactionSection = ({classeActive, factions, setClasseFactionAndSetQuery, factionActive}: any) => {
     return (
         <section className={"faction_content_container"}>
-            <h1>Faction</h1>
+            <h1>Séléctionnez votre faction</h1>
             <div className={"faction_content"}>
                 {
                     classeActive && factions.sort((factionA: any, factionB: any) => factionA.id - factionB.id).map((faction: any) => {

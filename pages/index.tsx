@@ -22,6 +22,7 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
     const [factionActive, setFactionActive] = React.useState(0);
     const [idBuildActif, setIdBuildActif] = React.useState(0);
     const [guide, setGuide] = React.useState<any>();
+    const scrollRef = React.useRef();
 
     React.useEffect(() => {
         if (idBuildActif === 0) return;
@@ -59,6 +60,10 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
         }
     }, [])
 
+    React.useEffect(() => {
+        scrollRef.current.scrollIntoView({ behavior: 'smooth' });
+    });
+
 
     const getClasseName = () => {
         const classe = classes.filter((classe: any) => classe.id === classeActive);
@@ -94,16 +99,16 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
             <Navbar/>
             <Header classes={classes} setClasseActiveAndSetQuery={setClasseActiveAndSetQuery}
                     classeActive={classeActive}/>
-            <main className={"content_container"}>
-                <section className={"classe_content_container"}>
-                    <h1>{getClasseName()}</h1>
-                </section>
+            <main className={"main_content_container"}>
+                <div className={"content_container"}>
                 <FactionSection classeActive={classeActive} factions={factions}
                                 setClasseFactionAndSetQuery={setClasseFactionAndSetQuery} factionActive={factionActive}/>
                 <BuildSection classeActive={classeActive} factionActive={factionActive} guides={guides}
                               setBuildActifAndSetQuery={setBuildActifAndSetQuery} idBuildActif={idBuildActif}/>
                 <StuffSection guide={guide}/>
                 <TextContentSection guide={guide} factionActive={factionActive}/>
+                <div ref={scrollRef} />
+                </div>
             </main>
             <Footer />
         </main>

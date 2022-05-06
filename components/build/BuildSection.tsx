@@ -4,7 +4,7 @@ import clsx from "clsx";
 const BuildSection = ({guides, classeActive, factionActive, setBuildActifAndSetQuery, idBuildActif}:any) => {
     return (
         <section className={"build_container"}>
-            <h1>Builds</h1>
+            <h1>Séléctionnez votre build</h1>
             <div className={"build_container_items-container"}>
             {guides.map((guide: any) => {
                 if (guide.attributes.classe.data.id === classeActive && guide.attributes.faction.data.id === factionActive) {
