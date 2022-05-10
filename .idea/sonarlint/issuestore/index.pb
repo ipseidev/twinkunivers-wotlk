@@ -34,12 +34,8 @@ F
 graphql/getFactions.ts,b/8/b8878d4ae6fde2ba6f558956046c766f3c1b8fe0
 >
 .graphqlconfig,8/d/8df006246b7f5fae48a54734e35d9a2553dee9b6
->
-pages/_app.tsx,5/5/550528cc072fa7d76d123e2f4303d4ab39daa8e8
 D
 graphql/getGuides.ts,2/5/250ed321e6309c394d83bf3a50c77e5cf9f4ec44
-]
--components/textContent/TextContentSection.tsx,6/7/67c641085a4c5821329941a0998620aaa144b4eb
 E
 graphql/getClasses.ts,e/8/e85d91b4a2ab46c4c63d02f2cc4bf30d8cace80c
 K
@@ -48,3 +44,7 @@ M
 styles/components/footer.scss,b/d/bdc699d1ce8c10367ca6d513b4089d00ec00fe67
 K
 components/navbar/index.tsx,6/e/6e65188de81c60d43c1a6d251471da168ef50c94
+L
+components/header/Header.tsx,6/a/6abb79180f4ff353b84d81b874346968b33d46b8
+P
+ components/stuff/StuffButton.tsx,8/a/8a4a5324d254bd079c81064118a33cf89dd5884e
