@@ -9,14 +9,18 @@ const FactionSection = ({classeActive, factions, setClasseFactionAndSetQuery, fa
             <div className={"faction_content"}>
                 {
                     classeActive && factions.sort((factionA: any, factionB: any) => factionA.id - factionB.id).map((faction: any) => {
-                        return (
-                            <div className={"faction_flag"} key={faction.id}
-                                 onClick={() => setClasseFactionAndSetQuery(faction.id)}>
-                                <Image src={faction.attributes.icon.data.attributes.url} width={100}
-                                       height={100} alt={faction.attributes.faction}
-                                       className={clsx("image_faction", (factionActive !== 0 && factionActive !== faction.id) && "image_faction-disable")}/>
-                            </div>
-                        )
+                        if(faction) {
+
+
+                            return (
+                                <div className={"faction_flag"} key={faction.id}
+                                     onClick={() => setClasseFactionAndSetQuery(faction.id)}>
+                                    <Image src={faction.attributes.icon.data.attributes.url} width={100}
+                                           height={100} alt={faction.attributes.faction}
+                                           className={clsx("image_faction", (factionActive !== 0 && factionActive !== faction.id) && "image_faction-disable")}/>
+                                </div>
+                            )
+                        }
                     })
                 }
             </div>
