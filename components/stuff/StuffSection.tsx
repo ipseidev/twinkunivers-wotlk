@@ -4,7 +4,6 @@ import StuffButton from "./StuffButton";
 const StuffSection = ({guide}: any) => {
     return (
         <section>
-            <h1 className={"text-center"}>Équipement optimal</h1>
             {
                 guide && (
                     <div className={"stuff_container"}>
