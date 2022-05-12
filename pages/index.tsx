@@ -43,26 +43,26 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
     })
 
     React.useEffect(() => {
-        if(idBuildActif === 0) {
+        if (idBuildActif === 0) {
             setGuide('')
         }
     }, [idBuildActif])
 
     React.useEffect(() => {
         console.log("router =>", router.query)
-        if(router.query?.classe){
+        if (router.query?.classe) {
             setClasseActiveAndSetQuery(router.query?.classe)
         }
-        if(router.query?.faction){
+        if (router.query?.faction) {
             setClasseFactionAndSetQuery(router.query?.faction)
         }
-        if(router.query?.build){
+        if (router.query?.build) {
             setIdBuildActif(router.query?.build)
         }
     }, [])
 
     React.useEffect(() => {
-        scrollRef.current.scrollIntoView({ behavior: 'smooth' });
+        scrollRef.current.scrollIntoView({behavior: 'smooth'});
     });
 
 
@@ -104,16 +104,20 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
                             classeActive={classeActive}/>
             <main className={"main_content_container"}>
                 <div className={"content_container"}>
-                <FactionSection classeActive={classeActive} factions={factions}
-                                setClasseFactionAndSetQuery={setClasseFactionAndSetQuery} factionActive={factionActive}/>
-                <BuildSection classeActive={classeActive} factionActive={factionActive} guides={guides}
-                              setBuildActifAndSetQuery={setBuildActifAndSetQuery} idBuildActif={idBuildActif}/>
-                <StuffSection guide={guide}/>
-                <TextContentSection guide={guide} factionActive={factionActive}/>
-                <div ref={scrollRef} />
+
+                    <FactionSection classeActive={classeActive} factions={factions}
+                                    setClasseFactionAndSetQuery={setClasseFactionAndSetQuery}
+                                    factionActive={factionActive}/>
+                    <div ref={scrollRef}/>
+                    <BuildSection classeActive={classeActive} factionActive={factionActive} guides={guides}
+                                  setBuildActifAndSetQuery={setBuildActifAndSetQuery} idBuildActif={idBuildActif}/>
+
+                    <StuffSection guide={guide}/>
+                    <TextContentSection guide={guide} factionActive={factionActive}/>
+
                 </div>
             </main>
-            <Footer />
+            <Footer/>
         </main>
     )
 }
@@ -127,7 +131,7 @@ export async function getServerSideProps() {
 
     const factions = await client.query(
         {
-            query:getFactions,
+            query: getFactions,
         });
 
     const guides = await client.query(

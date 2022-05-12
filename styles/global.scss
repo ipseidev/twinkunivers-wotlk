@@ -134,12 +134,13 @@ background-image: url("../assets/images/azeroth.png");
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     margin: 10px 0;
   }
 
   &-item {
     padding: 5px;
-    margin: 0 5px;
+    margin: 5px;
     border: 1px solid white;
     border-radius: 5px;
     cursor: pointer;

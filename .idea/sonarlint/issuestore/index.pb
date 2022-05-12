@@ -40,7 +40,5 @@ L
 styles/components/index.scss,a/6/a6998e75716847d0d525a51011f4b9781cb08442
 M
 styles/components/layout.scss,5/5/55839c233e3063173cce4d400ed9d792c1872d42
-B
-styles/global.scss,8/5/85ab6bf5b9f989d1749e5a753cf5db54e4b291f0
 A
 styles/index.scss,0/a/0a7831a13f944128d6b88fadd547aac66f470fc1
