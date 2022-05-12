@@ -14,8 +14,7 @@ const Header = ({classes, setClasseActiveAndSetQuery, classeActive}: any) => {
                     <h3 style={{color: "#144165", fontSize: "2rem", textShadow: "3px 3px 3px black"}}>WOTLK
                         edition</h3>
                 </div>
-                <CarouselClasse classes={classes} selectClasse={setClasseActiveAndSetQuery}
-                                classeActive={classeActive}/>
+
 
             </div>
         </header>

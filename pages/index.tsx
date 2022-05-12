@@ -15,6 +15,7 @@ import {getClasses} from "../graphql/getClasses";
 import {getFactions} from "../graphql/getFactions";
 import {getGuides} from "../graphql/getGuides";
 import Footer from "../components/footer";
+import CarouselClasse from "../components/carousel/CarouselClasse";
 
 const Home: NextPage = ({classes, factions, guides}: any) => {
     const router = useRouter();
@@ -99,6 +100,8 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
             <Navbar/>
             <Header classes={classes} setClasseActiveAndSetQuery={setClasseActiveAndSetQuery}
                     classeActive={classeActive}/>
+            <CarouselClasse classes={classes} selectClasse={setClasseActiveAndSetQuery}
+                            classeActive={classeActive}/>
             <main className={"main_content_container"}>
                 <div className={"content_container"}>
                 <FactionSection classeActive={classeActive} factions={factions}

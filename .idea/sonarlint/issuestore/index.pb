@@ -40,8 +40,6 @@ L
 styles/components/index.scss,a/6/a6998e75716847d0d525a51011f4b9781cb08442
 M
 styles/components/layout.scss,5/5/55839c233e3063173cce4d400ed9d792c1872d42
-M
-styles/components/navbar.scss,3/5/350782fef052743d4730ac39ba351e5d24d30533
 B
 styles/global.scss,8/5/85ab6bf5b9f989d1749e5a753cf5db54e4b291f0
 A
