@@ -2,6 +2,7 @@ import React from 'react';
 import clsx from "clsx";
 
 const BuildSection = ({guides, classeActive, factionActive, setBuildActifAndSetQuery, idBuildActif}:any) => {
+    if(!factionActive) return ;
     return (
         <section className={"build_container"} id={"build"}>
             <div className={"build_container_items-container"}>

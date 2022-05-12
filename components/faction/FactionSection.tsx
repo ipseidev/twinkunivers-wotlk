@@ -3,11 +3,12 @@ import Image from "next/image";
 import clsx from "clsx";
 
 const FactionSection = ({classeActive, factions, setClasseFactionAndSetQuery, factionActive}: any) => {
+    if(!classeActive) return;
     return (
         <section className={"faction_content_container"}>
             <div className={"faction_content"}>
                 {
-                    classeActive && factions.sort((factionA: any, factionB: any) => factionA.id - factionB.id).map((faction: any) => {
+                    classeActive ? factions.sort((factionA: any, factionB: any) => factionA.id - factionB.id).map((faction: any) => {
                         if(faction) {
 
 
@@ -20,7 +21,7 @@ const FactionSection = ({classeActive, factions, setClasseFactionAndSetQuery, fa
                                 </div>
                             )
                         }
-                    })
+                    }) : <></>
                 }
             </div>
         </section>

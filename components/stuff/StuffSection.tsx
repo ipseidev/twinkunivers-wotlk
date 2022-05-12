@@ -2,6 +2,7 @@ import React from 'react';
 import StuffButton from "./StuffButton";
 
 const StuffSection = ({guide}: any) => {
+    if(!guide) return ;
     return (
         <section>
             {

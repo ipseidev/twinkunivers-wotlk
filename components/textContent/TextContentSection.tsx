@@ -18,7 +18,7 @@ const TextContentSection = ({guide, factionActive}: any) => {
 
 
     return (
-        <section>
+        <section style={{marginBottom:100}}>
             {
                 guide &&
                 <div dangerouslySetInnerHTML={{__html: guide.classe.data.attributes[faction]}} className={"article_content"}/>

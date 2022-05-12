@@ -16,10 +16,14 @@ const Navbar = () => {
                                 <p>Suivez-nous sur : </p>
                             </li>
                             <li>
+                                <a href={"https://discord.gg/vXDAHJDm3h"} target={"_blank"} rel="noreferrer">
                                 <BsDiscord/>
+                                </a>
                             </li>
                             <li>
+                                <a href={"https://www.youtube.com/channel/UCxuDALY9cayfeG9o3DQgs7A"} target={"_blank"} rel="noreferrer">
                                 <BsYoutube/>
+                                </a>
                             </li>
                         </ul>
                     </nav>
@@ -28,14 +32,9 @@ const Navbar = () => {
                     <nav className={'navbar_bottom'}>
                         <ul>
                             <li>
-                                <Link href={"/"}>
-                                    Accueil
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={"/"}>
+                                <a href={"#classes"}>
                                     Guides de classes
-                                </Link>
+                                </a>
                             </li>
                         </ul>
                     </nav>

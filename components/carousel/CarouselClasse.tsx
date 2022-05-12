@@ -10,7 +10,7 @@ SwiperCore.use([Navigation, Pagination]);
 
 const CarouselClasse = ({classes, selectClasse, classeActive}: any) => {
     return (
-        <section className={"carousel_classe_container"}>
+        <section className={"carousel_classe_container"} id={"classes"}>
             <div className={"carousel_classe"}>
                 <Swiper
                     modules={[Navigation, Pagination]}

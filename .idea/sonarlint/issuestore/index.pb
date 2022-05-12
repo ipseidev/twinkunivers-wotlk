@@ -20,10 +20,6 @@ O
 components/stuff/StuffImage.tsx,7/4/74ce4b0e94bb782b97b054c49313f88f9f0a382e
 >
 .graphqlconfig,8/d/8df006246b7f5fae48a54734e35d9a2553dee9b6
-K
-components/footer/index.tsx,a/f/af3ac286ddf5c2323f7b45d57e113c8b784270b7
-P
- components/stuff/StuffButton.tsx,8/a/8a4a5324d254bd079c81064118a33cf89dd5884e
 B
 tailwind.config.js,0/9/0918cbb76f2c44f223706cec9d31a32cd1177ce4
 E
@@ -34,8 +30,6 @@ F
 graphql/getFactions.ts,b/8/b8878d4ae6fde2ba6f558956046c766f3c1b8fe0
 K
 styles/components/font.scss,f/9/f9b6c30f99ee89195bd12fbcf2a1e1da035b581b
-M
-styles/components/footer.scss,b/d/bdc699d1ce8c10367ca6d513b4089d00ec00fe67
 L
 styles/components/index.scss,a/6/a6998e75716847d0d525a51011f4b9781cb08442
 M
