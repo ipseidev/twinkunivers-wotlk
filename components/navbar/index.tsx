@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image'
 import React from 'react';
 import {BsDiscord, BsYoutube} from "react-icons/bs"
+import Logo from "../../assets/images/logo2.png"
 
 const Navbar = () => {
     return (
@@ -44,8 +45,8 @@ const Navbar = () => {
             <div className={'navbar_middle_container'}>
                 <div className={'navbar_middle_background_container'}>
                     <div className={'navbar_middle_logo_container'}>
-                        <a itemProp="url" href="" style={{height: 84}}>
-                            <Image  src={"https://twinkunivers.com/wp-content/uploads/2021/07/cropped-LOGO.png"} width="100" height="100" alt="logo"/>
+                        <a itemProp="url" href="" style={{height: 120}}>
+                            <Image  src={Logo} width="150" height="120" alt="logo"/>
                         </a>
                     </div>
                 </div>
