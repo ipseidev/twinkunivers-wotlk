@@ -19,7 +19,7 @@ const Header = ({classes, setClasseActiveAndSetQuery, classeActive, lang, setLan
                     >Twinkunivers</h1>
                     <h3
                         className={"animate__animated animate__fadeInRight"}
-                        style={{color: "#00CAE2", fontSize: "2rem", textShadow: "3px 3px 3px black", position:"absolute", top:80}}>WOTLK
+                        style={{color: "#00CAE2", fontSize: "2rem", textShadow: "3px 3px 3px black", position:"absolute", top:90}}>WOTLK
                         edition</h3>
                 </div>
 
