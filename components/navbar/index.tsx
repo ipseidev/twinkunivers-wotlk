@@ -31,10 +31,10 @@ const Navbar = ({lang, setLang}:any) => {
                         <select style={{background:"transparent"}} onChange={(value) => {
                             location.href = `https://twinkunivers-wotlk.vercel.app/?lang=${value.target.value}`;
                         }} value={lang}>
-                            <option value={"fr"}>fr</option>
-                            <option value={"en"}>en</option>
-                            <option value={"de"}>de</option>
-                            <option value={"es"}>es</option>
+                            <option value={"fr"} style={{color:lang === "fr" ? "white" : "black"}}>FR</option>
+                            <option value={"en"} style={{color:lang === "en" ? "white" : "black"}}>EN</option>
+                            <option value={"de"} style={{color:lang === "de" ? "white" : "black"}}>DE</option>
+                            <option value={"es"} style={{color:lang === "es" ? "white" : "black"}}>ES</option>
                         </select>
                     </nav>
                 </div>
