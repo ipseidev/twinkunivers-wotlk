@@ -5,6 +5,7 @@ import "../styles/index.scss";
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
+import 'animate.css';
 
 function MyApp({Component, pageProps}: AppProps) {
     return (

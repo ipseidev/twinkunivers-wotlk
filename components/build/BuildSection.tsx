@@ -5,7 +5,7 @@ const BuildSection = ({guides, classeActive, factionActive, setBuildActifAndSetQ
     if(!factionActive) return ;
     return (
         <section className={"build_container"} id={"build"}>
-            <div className={"build_container_items-container"}>
+            <div className={"build_container_items-container animate__animated animate__fadeInDown"}>
             {guides.map((guide: any) => {
                 if (guide.attributes.classe.data.id === classeActive && guide.attributes.faction.data.id === factionActive) {
                     return (

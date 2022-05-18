@@ -27,6 +27,7 @@ background-image: url("../assets/images/azeroth.png");
     width: 1200px;
     margin: auto;
     color: white;
+    min-height: 50vh;
 
   }
 }
@@ -218,5 +219,8 @@ background-image: url("../assets/images/azeroth.png");
     display: block; font-size: 1.17em;
     margin: 1em 0;
     font-weight: bold;
+  }
+  a{
+    color: #57aad6
   }
 }

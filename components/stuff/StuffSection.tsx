@@ -8,7 +8,7 @@ const StuffSection = ({guide}: any) => {
             {
                 guide && (
                     <div className={"stuff_container"}>
-                        <div className={"stuff_left-container"}>
+                        <div className={"stuff_left-container animate__animated animate__fadeInLeft"}>
                             <StuffButton item={guide.tete?.item} enchant={guide.tete?.enchant}
                                          commentaire={guide.tete?.commentaire} side={"left"}/>
                             <StuffButton item={guide.cou?.item} enchant={guide.cou?.enchant}
@@ -23,7 +23,7 @@ const StuffSection = ({guide}: any) => {
                             <StuffButton item={guide.brassards?.item} enchant={guide.brassards?.enchant}
                                          commentaire={guide.brassards?.commentaire} side={"left"}/>
                         </div>
-                        <div className={"stuff_bottom-container"}>
+                        <div className={"stuff_bottom-container animate__animated animate__fadeInUp"}>
                             <StuffButton item={guide.main_droite?.item} enchant={guide.main_droite?.enchant}
                                          commentaire={guide.main_droite?.commentaire} side={"bottom"}/>
                             <StuffButton item={guide.main_gauche?.item} enchant={guide.main_gauche?.enchant}
@@ -31,7 +31,7 @@ const StuffSection = ({guide}: any) => {
                             <StuffButton item={guide.distance?.item} enchant={guide.distance?.enchant}
                                          commentaire={guide.distance?.commentaire} side={"bottom"}/>
                         </div>
-                        <div className={"stuff_right-container"}>
+                        <div className={"stuff_right-container animate__animated animate__fadeInRight"}>
                             <StuffButton item={guide.gants?.item} enchant={guide.gants?.enchant}
                                          commentaire={guide.gants?.commentaire} side={"right"}/>
                             <StuffButton item={guide.ceinture?.item} enchant={guide.ceinture?.enchant}

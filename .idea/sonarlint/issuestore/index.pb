@@ -30,11 +30,5 @@ K
 components/layout/index.tsx,5/1/5114ea96b2c895afa99073b7b0d8535df2a38af0
 M
 styles/components/header.scss,6/a/6af8874f783e8ac883f90e838d9a6eefb5fcec44
-U
-%components/stuff/StuffCommentaire.tsx,d/f/df9b804e5c2bc1668c53b4b423b8c49a24008763
-B
-styles/global.scss,8/5/85ab6bf5b9f989d1749e5a753cf5db54e4b291f0
-U
-%components/faction/FactionSection.tsx,f/1/f1680354d29c8d9b683369e33cfc6aff73a12596
 M
 styles/components/footer.scss,b/d/bdc699d1ce8c10367ca6d513b4089d00ec00fe67
