@@ -26,7 +26,6 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
     const [lang, setLang] = React.useState("en")
     const [guide, setGuide] = React.useState<any>();
     const scrollRef = React.useRef();
-    console.log(guides);
 
     React.useEffect(() => {
         if (idBuildActif === 0) return;
