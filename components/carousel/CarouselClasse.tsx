@@ -24,10 +24,11 @@ const CarouselClasse = ({classes, selectClasse, classeActive}: any) => {
                 >
                     {
                         classes.map((classe: any) => {
+                            if(!classe.attributes?.icon?.data) return;
                             return (
                                 <SwiperSlide className={"swiper_item"} key={classe.id} onClick={() => selectClasse(classe.id)}>
                                     <div className={"swiper_image_container"}>
-                                        <Image src={classe.attributes.icon.data.attributes.url} width={100} height={100} alt={classe.attributes.classe}
+                                        <Image src={classe.attributes?.icon?.data?.attributes?.url} width={100} height={100} alt={classe.attributes.classe}
                                                className={clsx("swiper_image_classe", classeActive === classe.id && "swiper_image_classe-active")}/>
                                     </div>
                                 </SwiperSlide>

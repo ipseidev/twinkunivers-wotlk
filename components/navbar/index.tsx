@@ -26,17 +26,16 @@ const Navbar = ({lang, setLang}:any) => {
                                 <BsYoutube/>
                                 </a>
                             </li>
-                            <li>
-                                <select style={{background:"transparent"}} onChange={(value) => {
-                                    location.href = `https://twinkunivers-wotlk.vercel.app/?lang=${value.target.value}`;
-                                }} value={lang}>
-                                    <option value={"fr"}>fr</option>
-                                    <option value={"en"}>en</option>
-                                    <option value={"de"}>de</option>
-                                    <option value={"es"}>es</option>
-                                </select>
-                            </li>
+
                         </ul>
+                        <select style={{background:"transparent"}} onChange={(value) => {
+                            location.href = `https://twinkunivers-wotlk.vercel.app/?lang=${value.target.value}`;
+                        }} value={lang}>
+                            <option value={"fr"}>fr</option>
+                            <option value={"en"}>en</option>
+                            <option value={"de"}>de</option>
+                            <option value={"es"}>es</option>
+                        </select>
                     </nav>
                 </div>
                 <div className={'navbar_bottom_container'}>

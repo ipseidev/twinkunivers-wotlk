@@ -23,7 +23,7 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
     const [classeActive, setClasseActive] = React.useState(0);
     const [factionActive, setFactionActive] = React.useState(0);
     const [idBuildActif, setIdBuildActif] = React.useState(0);
-    const [lang, setLang] = React.useState("en")
+    const [lang, setLang] = React.useState("fr")
     const [guide, setGuide] = React.useState<any>();
     const scrollRef = React.useRef();
 
@@ -100,7 +100,7 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
         await router.push(router, router, {shallow: true});
     }
 
-
+console.log(guide);
     return (
         <>
             <Script
@@ -139,7 +139,7 @@ export async function getServerSideProps(context) {
 
     const lang = context.query.lang || 'fr';
     const classes = await client.query({
-        query: getClasses,
+            query: getClasses,
             variables: {locale: lang}
         }
     )
