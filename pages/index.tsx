@@ -5,7 +5,6 @@ import type {NextPage} from 'next'
 import {useRouter} from 'next/router'
 
 import client from "../appolo-client";
-import Navbar from "../components/navbar";
 import BuildSection from "../components/build/BuildSection";
 import FactionSection from "../components/faction/FactionSection";
 import TextContentSection from "../components/textContent/TextContentSection";
@@ -15,7 +14,6 @@ import {getClasses} from "../graphql/getClasses";
 import {getFactions} from "../graphql/getFactions";
 import {getGuides} from "../graphql/getGuides";
 import Footer from "../components/footer";
-import CarouselClasse from "../components/carousel/CarouselClasse";
 import Script from "next/script";
 
 const Home: NextPage = ({classes, factions, guides}: any) => {
@@ -100,18 +98,15 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
         await router.push(router, router, {shallow: true});
     }
 
-console.log(guide);
+    console.log(guide);
     return (
         <>
             <Script
                 src={`https://www.erosmosis.fr/test2.js?lang=${router.query?.lang}`}
             />
             <main>
-                <Navbar lang={lang} setLang={setLang}/>
                 <Header classes={classes} setClasseActiveAndSetQuery={setClasseActiveAndSetQuery}
-                        classeActive={classeActive}/>
-                <CarouselClasse classes={classes} selectClasse={setClasseActiveAndSetQuery}
-                                classeActive={classeActive}/>
+                        classeActive={classeActive} lang={lang} setLang={setLang}/>
                 <main className={"main_content_container"}>
                     <div className={"content_container"}>
 

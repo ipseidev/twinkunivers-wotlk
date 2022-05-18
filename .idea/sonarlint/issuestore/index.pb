@@ -29,6 +29,4 @@ A
 K
 components/layout/index.tsx,5/1/5114ea96b2c895afa99073b7b0d8535df2a38af0
 M
-styles/components/header.scss,6/a/6af8874f783e8ac883f90e838d9a6eefb5fcec44
-M
 styles/components/footer.scss,b/d/bdc699d1ce8c10367ca6d513b4089d00ec00fe67

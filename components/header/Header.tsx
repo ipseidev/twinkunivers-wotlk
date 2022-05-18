@@ -1,9 +1,11 @@
 import React from 'react';
 import CarouselClasse from "../carousel/CarouselClasse";
+import Navbar from "../navbar";
 
-const Header = ({classes, setClasseActiveAndSetQuery, classeActive}: any) => {
+const Header = ({classes, setClasseActiveAndSetQuery, classeActive, lang, setLang}: any) => {
     return (
         <header className={"homepage_header"}>
+            <Navbar lang={lang} setLang={setLang}/>
             <div className={"homepage_header_background"}>
                 <div  style={{display:"flex", alignItems:"flex-end", justifyContent:"center", flexDirection:"column",position:"relative"}}>
                     <h1 style={{
@@ -23,6 +25,8 @@ const Header = ({classes, setClasseActiveAndSetQuery, classeActive}: any) => {
 
 
             </div>
+            <CarouselClasse classes={classes} selectClasse={setClasseActiveAndSetQuery}
+                            classeActive={classeActive}/>
         </header>
     );
 };
