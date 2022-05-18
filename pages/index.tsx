@@ -80,6 +80,7 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
     const setClasseActiveAndSetQuery = async (id: number) => {
         setIdBuildActif(0);
         setClasseActive(id);
+        setFactionActive(0)
         router.query.classe = `${id}`;
         await router.push(router, router, {shallow: true});
     }
@@ -98,7 +99,6 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
         await router.push(router, router, {shallow: true});
     }
 
-    console.log(guide);
     return (
         <>
             <Script
