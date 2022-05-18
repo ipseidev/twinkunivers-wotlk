@@ -4,11 +4,12 @@ import React from 'react';
 import {BsDiscord, BsYoutube} from "react-icons/bs"
 import Logo from "../../assets/images/logo2.png"
 
-const Navbar = () => {
+
+
+const Navbar = ({lang, setLang}:any) => {
     return (
         <section className={'navbar_container'}>
             <div className={'navbar_sub_container'}>
-                <div className={"navbar_transform_skew"}/>
                 <div className={'navbar_top_container'}>
                     <nav className={'navbar_top'}>
                         <ul>
@@ -25,6 +26,16 @@ const Navbar = () => {
                                 <BsYoutube/>
                                 </a>
                             </li>
+                            <li>
+                                <select style={{background:"transparent"}} onChange={(value) => {
+                                    location.href = `http://localhost:3000/?lang=${value.target.value}`;
+                                }} value={lang}>
+                                    <option value={"fr"}>fr</option>
+                                    <option value={"en"}>en</option>
+                                    <option value={"de"}>de</option>
+                                    <option value={"es"}>es</option>
+                                </select>
+                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -37,10 +48,12 @@ const Navbar = () => {
                                 </a>
                             </li>
                         </ul>
+
                     </nav>
 
                 </div>
             </div>
+
             <div className={'navbar_middle_container'}>
                 <div className={'navbar_middle_background_container'}>
                     <div className={'navbar_middle_logo_container'}>
@@ -51,6 +64,7 @@ const Navbar = () => {
                 </div>
             </div>
         </section>
+
     );
 };
 

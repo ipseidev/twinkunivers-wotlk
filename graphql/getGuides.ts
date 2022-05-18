@@ -1,11 +1,12 @@
 import {gql} from "@apollo/client";
 
 export const getGuides = gql`
-    query guides {
-        guides(pagination: { start: 1, limit: 100 }){
+    query guides($locale:I18NLocaleCode) {
+        guides(locale:$locale, pagination: { start: 0, limit: 300 }){
             data{
                 id
                 attributes{
+                    locale
                     description
                     classe{
                         data{

@@ -29,8 +29,8 @@ const StuffButton = ({enchant, item, commentaire, side, ring1, ring2, bijou1, bi
                     <div className={'stuff_item_container-bottom'}>
                         <div className={'stuff_item_details'}>
                             {<StuffImage item={item} size={'large'}/>}
-                            {commentaire && <StuffCommentaire commentaire={commentaire}/>}
                         </div>
+                        {commentaire && <StuffCommentaire commentaire={commentaire}/>}
                         {enchant && <StuffImage item={enchant} size={'medium'}/>}
 
                     </div>)

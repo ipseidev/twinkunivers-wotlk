@@ -1,8 +1,8 @@
 import {gql} from "@apollo/client";
 
 export const getFactions =  gql`
-    query factions {
-        factions{
+    query factions($locale:I18NLocaleCode) {
+        factions(locale:$locale, pagination: { start: 0, limit: 300 }){
             data{
                 id
                 attributes{

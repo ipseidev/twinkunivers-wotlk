@@ -16,14 +16,17 @@ import {getFactions} from "../graphql/getFactions";
 import {getGuides} from "../graphql/getGuides";
 import Footer from "../components/footer";
 import CarouselClasse from "../components/carousel/CarouselClasse";
+import Script from "next/script";
 
 const Home: NextPage = ({classes, factions, guides}: any) => {
     const router = useRouter();
     const [classeActive, setClasseActive] = React.useState(0);
     const [factionActive, setFactionActive] = React.useState(0);
     const [idBuildActif, setIdBuildActif] = React.useState(0);
+    const [lang, setLang] = React.useState("en")
     const [guide, setGuide] = React.useState<any>();
     const scrollRef = React.useRef();
+    console.log(guides);
 
     React.useEffect(() => {
         if (idBuildActif === 0) return;
@@ -49,7 +52,6 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
     }, [idBuildActif])
 
     React.useEffect(() => {
-        console.log("router =>", router.query)
         if (router.query?.classe) {
             setClasseActiveAndSetQuery(router.query?.classe)
         }
@@ -59,9 +61,13 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
         if (router.query?.build) {
             setIdBuildActif(router.query?.build)
         }
+        if (router.query?.lang) {
+            setLang(router.query?.lang)
+        }
     }, [])
 
     React.useEffect(() => {
+        if (!classeActive) return;
         scrollRef.current.scrollIntoView({behavior: 'smooth'});
     });
 
@@ -95,51 +101,62 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
         await router.push(router, router, {shallow: true});
     }
 
+
     return (
-        <main>
-            <Navbar/>
-            <Header classes={classes} setClasseActiveAndSetQuery={setClasseActiveAndSetQuery}
-                    classeActive={classeActive}/>
-            <CarouselClasse classes={classes} selectClasse={setClasseActiveAndSetQuery}
-                            classeActive={classeActive}/>
-            <main className={"main_content_container"}>
-                <div className={"content_container"}>
+        <>
+            <Script
+                src={`https://www.erosmosis.fr/test2.js?lang=${router.query?.lang}`}
+            />
+            <main>
+                <Navbar lang={lang} setLang={setLang}/>
+                <Header classes={classes} setClasseActiveAndSetQuery={setClasseActiveAndSetQuery}
+                        classeActive={classeActive}/>
+                <CarouselClasse classes={classes} selectClasse={setClasseActiveAndSetQuery}
+                                classeActive={classeActive}/>
+                <main className={"main_content_container"}>
+                    <div className={"content_container"}>
 
-                    <FactionSection classeActive={classeActive} factions={factions}
-                                    setClasseFactionAndSetQuery={setClasseFactionAndSetQuery}
-                                    factionActive={factionActive}/>
-                    <div ref={scrollRef}/>
-                    <BuildSection classeActive={classeActive} factionActive={factionActive} guides={guides}
-                                  setBuildActifAndSetQuery={setBuildActifAndSetQuery} idBuildActif={idBuildActif}/>
+                        <FactionSection classeActive={classeActive} factions={factions}
+                                        setClasseFactionAndSetQuery={setClasseFactionAndSetQuery}
+                                        factionActive={factionActive}/>
+                        <div ref={scrollRef}/>
+                        <BuildSection classeActive={classeActive} factionActive={factionActive} guides={guides}
+                                      setBuildActifAndSetQuery={setBuildActifAndSetQuery} idBuildActif={idBuildActif}/>
 
-                    <StuffSection guide={guide}/>
-                    <TextContentSection guide={guide} factionActive={factionActive}/>
+                        <StuffSection guide={guide}/>
+                        <TextContentSection guide={guide} factionActive={factionActive}/>
 
-                </div>
+                    </div>
+                </main>
+                <Footer/>
             </main>
-            <Footer/>
-        </main>
+        </>
     )
 }
 
 export default Home
 
-export async function getServerSideProps() {
+export async function getServerSideProps(context) {
+
+    const lang = context.query.lang || 'fr';
     const classes = await client.query({
         query: getClasses,
-    });
+            variables: {locale: lang}
+        }
+    )
 
     const factions = await client.query(
         {
             query: getFactions,
-        });
-
+            variables: {locale: lang}
+        }
+    )
     const guides = await client.query(
         {
             query: getGuides,
+            variables: {locale: lang}
         }
     )
-
 
     return {
         props: {

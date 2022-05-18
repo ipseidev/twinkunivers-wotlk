@@ -34,6 +34,14 @@
 
     .navbar_top_container {
       height: 45px;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 37%;
+        width: 100%;
+        border-bottom: 1px solid rgba(203, 203, 203, .1);
+      }
 
       ul {
         li {
@@ -86,7 +94,9 @@
 
 .navbar_top, .navbar_bottom {
   height: 100%;
-
+  display: flex;
+  align-items: center;
+  justify-content: start;
   ul {
     display: flex;
     align-items: center;

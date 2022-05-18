@@ -1,0 +1,819 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+union GenericMorph = Classe | ComponentStuffItem | Faction | Guide | I18NLocale | Race | UploadFile | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser
+
+type Classe {
+    alliance: String
+    alliance_horde: String
+    best_race_alliance: RaceEntityResponse
+    best_race_horde: RaceEntityResponse
+    classe: String
+    createdAt: DateTime
+    guides(filters: GuideFiltersInput, pagination: PaginationArg = {}, publicationState: PublicationState = LIVE, sort: [String] = []): GuideRelationResponseCollection
+    horde: String
+    icon: UploadFileEntityResponse
+    locale: String
+    localizations(filters: ClasseFiltersInput, pagination: PaginationArg = {}, sort: [String] = []): ClasseRelationResponseCollection
+    updatedAt: DateTime
+}
+
+type ClasseEntity {
+    attributes: Classe
+    id: ID
+}
+
+type ClasseEntityResponse {
+    data: ClasseEntity
+}
+
+type ClasseEntityResponseCollection {
+    data: [ClasseEntity!]!
+    meta: ResponseCollectionMeta!
+}
+
+type ClasseRelationResponseCollection {
+    data: [ClasseEntity!]!
+}
+
+type ComponentStuffItem {
+    commentaire: String
+    enchant: String
+    id: ID!
+    item: String
+}
+
+type Faction {
+    createdAt: DateTime
+    faction: String!
+    guides(filters: GuideFiltersInput, pagination: PaginationArg = {}, publicationState: PublicationState = LIVE, sort: [String] = []): GuideRelationResponseCollection
+    icon: UploadFileEntityResponse
+    locale: String
+    localizations(filters: FactionFiltersInput, pagination: PaginationArg = {}, sort: [String] = []): FactionRelationResponseCollection
+    updatedAt: DateTime
+}
+
+type FactionEntity {
+    attributes: Faction
+    id: ID
+}
+
+type FactionEntityResponse {
+    data: FactionEntity
+}
+
+type FactionEntityResponseCollection {
+    data: [FactionEntity!]!
+    meta: ResponseCollectionMeta!
+}
+
+type FactionRelationResponseCollection {
+    data: [FactionEntity!]!
+}
+
+type Guide {
+    bague1: ComponentStuffItem
+    bague2: ComponentStuffItem
+    bijou1: ComponentStuffItem
+    bijou2: ComponentStuffItem
+    bottes: ComponentStuffItem
+    brassards: ComponentStuffItem
+    cape: ComponentStuffItem
+    ceinture: ComponentStuffItem
+    classe: ClasseEntityResponse
+    cou: ComponentStuffItem
+    createdAt: DateTime
+    description: String!
+    distance: ComponentStuffItem
+    epaule: ComponentStuffItem
+    faction: FactionEntityResponse
+    gants: ComponentStuffItem
+    locale: String
+    localizations(filters: GuideFiltersInput, pagination: PaginationArg = {}, publicationState: PublicationState = LIVE, sort: [String] = []): GuideRelationResponseCollection
+    main_droite: ComponentStuffItem
+    main_gauche: ComponentStuffItem
+    pantalon: ComponentStuffItem
+    publishedAt: DateTime
+    tete: ComponentStuffItem
+    titre: String
+    torse: ComponentStuffItem
+    updatedAt: DateTime
+}
+
+type GuideEntity {
+    attributes: Guide
+    id: ID
+}
+
+type GuideEntityResponse {
+    data: GuideEntity
+}
+
+type GuideEntityResponseCollection {
+    data: [GuideEntity!]!
+    meta: ResponseCollectionMeta!
+}
+
+type GuideRelationResponseCollection {
+    data: [GuideEntity!]!
+}
+
+type I18NLocale {
+    code: String
+    createdAt: DateTime
+    name: String
+    updatedAt: DateTime
+}
+
+type I18NLocaleEntity {
+    attributes: I18NLocale
+    id: ID
+}
+
+type I18NLocaleEntityResponse {
+    data: I18NLocaleEntity
+}
+
+type I18NLocaleEntityResponseCollection {
+    data: [I18NLocaleEntity!]!
+    meta: ResponseCollectionMeta!
+}
+
+type Mutation {
+    createClasse(data: ClasseInput!, locale: I18NLocaleCode): ClasseEntityResponse
+    createClasseLocalization(data: ClasseInput, id: ID, locale: I18NLocaleCode): ClasseEntityResponse
+    createFaction(data: FactionInput!, locale: I18NLocaleCode): FactionEntityResponse
+    createFactionLocalization(data: FactionInput, id: ID, locale: I18NLocaleCode): FactionEntityResponse
+    createGuide(data: GuideInput!, locale: I18NLocaleCode): GuideEntityResponse
+    createGuideLocalization(data: GuideInput, id: ID, locale: I18NLocaleCode): GuideEntityResponse
+    createRace(data: RaceInput!, locale: I18NLocaleCode): RaceEntityResponse
+    createRaceLocalization(data: RaceInput, id: ID, locale: I18NLocaleCode): RaceEntityResponse
+    createUploadFile(data: UploadFileInput!): UploadFileEntityResponse
+    "Create a new role"
+    createUsersPermissionsRole(data: UsersPermissionsRoleInput!): UsersPermissionsCreateRolePayload
+    "Create a new user"
+    createUsersPermissionsUser(data: UsersPermissionsUserInput!): UsersPermissionsUserEntityResponse!
+    deleteClasse(id: ID!, locale: I18NLocaleCode): ClasseEntityResponse
+    deleteFaction(id: ID!, locale: I18NLocaleCode): FactionEntityResponse
+    deleteGuide(id: ID!, locale: I18NLocaleCode): GuideEntityResponse
+    deleteRace(id: ID!, locale: I18NLocaleCode): RaceEntityResponse
+    deleteUploadFile(id: ID!): UploadFileEntityResponse
+    "Delete an existing role"
+    deleteUsersPermissionsRole(id: ID!): UsersPermissionsDeleteRolePayload
+    "Update an existing user"
+    deleteUsersPermissionsUser(id: ID!): UsersPermissionsUserEntityResponse!
+    "Confirm an email users email address"
+    emailConfirmation(confirmation: String!): UsersPermissionsLoginPayload
+    "Request a reset password token"
+    forgotPassword(email: String!): UsersPermissionsPasswordPayload
+    login(input: UsersPermissionsLoginInput!): UsersPermissionsLoginPayload!
+    multipleUpload(field: String, files: [Upload]!, ref: String, refId: ID): [UploadFileEntityResponse]!
+    "Register a user"
+    register(input: UsersPermissionsRegisterInput!): UsersPermissionsLoginPayload!
+    removeFile(id: ID!): UploadFileEntityResponse
+    "Reset user password. Confirm with a code (resetToken from forgotPassword)"
+    resetPassword(code: String!, password: String!, passwordConfirmation: String!): UsersPermissionsLoginPayload
+    updateClasse(data: ClasseInput!, id: ID!, locale: I18NLocaleCode): ClasseEntityResponse
+    updateFaction(data: FactionInput!, id: ID!, locale: I18NLocaleCode): FactionEntityResponse
+    updateFileInfo(id: ID!, info: FileInfoInput): UploadFileEntityResponse!
+    updateGuide(data: GuideInput!, id: ID!, locale: I18NLocaleCode): GuideEntityResponse
+    updateRace(data: RaceInput!, id: ID!, locale: I18NLocaleCode): RaceEntityResponse
+    updateUploadFile(data: UploadFileInput!, id: ID!): UploadFileEntityResponse
+    "Update an existing role"
+    updateUsersPermissionsRole(data: UsersPermissionsRoleInput!, id: ID!): UsersPermissionsUpdateRolePayload
+    "Update an existing user"
+    updateUsersPermissionsUser(data: UsersPermissionsUserInput!, id: ID!): UsersPermissionsUserEntityResponse!
+    upload(field: String, file: Upload!, info: FileInfoInput, ref: String, refId: ID): UploadFileEntityResponse!
+}
+
+type Pagination {
+    page: Int!
+    pageCount: Int!
+    pageSize: Int!
+    total: Int!
+}
+
+type Query {
+    classe(id: ID, locale: I18NLocaleCode): ClasseEntityResponse
+    classes(filters: ClasseFiltersInput, locale: I18NLocaleCode, pagination: PaginationArg = {}, sort: [String] = []): ClasseEntityResponseCollection
+    faction(id: ID, locale: I18NLocaleCode): FactionEntityResponse
+    factions(filters: FactionFiltersInput, locale: I18NLocaleCode, pagination: PaginationArg = {}, sort: [String] = []): FactionEntityResponseCollection
+    guide(id: ID, locale: I18NLocaleCode): GuideEntityResponse
+    guides(filters: GuideFiltersInput, locale: I18NLocaleCode, pagination: PaginationArg = {}, publicationState: PublicationState = LIVE, sort: [String] = []): GuideEntityResponseCollection
+    i18NLocale(id: ID): I18NLocaleEntityResponse
+    i18NLocales(filters: I18NLocaleFiltersInput, pagination: PaginationArg = {}, sort: [String] = []): I18NLocaleEntityResponseCollection
+    me: UsersPermissionsMe
+    race(id: ID, locale: I18NLocaleCode): RaceEntityResponse
+    races(filters: RaceFiltersInput, locale: I18NLocaleCode, pagination: PaginationArg = {}, sort: [String] = []): RaceEntityResponseCollection
+    uploadFile(id: ID): UploadFileEntityResponse
+    uploadFiles(filters: UploadFileFiltersInput, pagination: PaginationArg = {}, sort: [String] = []): UploadFileEntityResponseCollection
+    usersPermissionsRole(id: ID): UsersPermissionsRoleEntityResponse
+    usersPermissionsRoles(filters: UsersPermissionsRoleFiltersInput, pagination: PaginationArg = {}, sort: [String] = []): UsersPermissionsRoleEntityResponseCollection
+    usersPermissionsUser(id: ID): UsersPermissionsUserEntityResponse
+    usersPermissionsUsers(filters: UsersPermissionsUserFiltersInput, pagination: PaginationArg = {}, sort: [String] = []): UsersPermissionsUserEntityResponseCollection
+}
+
+type Race {
+    createdAt: DateTime
+    image: UploadFileEntityResponse
+    locale: String
+    localizations(filters: RaceFiltersInput, pagination: PaginationArg = {}, sort: [String] = []): RaceRelationResponseCollection
+    race: String!
+    updatedAt: DateTime
+}
+
+type RaceEntity {
+    attributes: Race
+    id: ID
+}
+
+type RaceEntityResponse {
+    data: RaceEntity
+}
+
+type RaceEntityResponseCollection {
+    data: [RaceEntity!]!
+    meta: ResponseCollectionMeta!
+}
+
+type RaceRelationResponseCollection {
+    data: [RaceEntity!]!
+}
+
+type ResponseCollectionMeta {
+    pagination: Pagination!
+}
+
+type UploadFile {
+    alternativeText: String
+    caption: String
+    createdAt: DateTime
+    ext: String
+    formats: JSON
+    hash: String!
+    height: Int
+    mime: String!
+    name: String!
+    previewUrl: String
+    provider: String!
+    provider_metadata: JSON
+    related: [GenericMorph]
+    size: Float!
+    updatedAt: DateTime
+    url: String!
+    width: Int
+}
+
+type UploadFileEntity {
+    attributes: UploadFile
+    id: ID
+}
+
+type UploadFileEntityResponse {
+    data: UploadFileEntity
+}
+
+type UploadFileEntityResponseCollection {
+    data: [UploadFileEntity!]!
+    meta: ResponseCollectionMeta!
+}
+
+type UsersPermissionsCreateRolePayload {
+    ok: Boolean!
+}
+
+type UsersPermissionsDeleteRolePayload {
+    ok: Boolean!
+}
+
+type UsersPermissionsLoginPayload {
+    jwt: String
+    user: UsersPermissionsMe!
+}
+
+type UsersPermissionsMe {
+    blocked: Boolean
+    confirmed: Boolean
+    email: String
+    id: ID!
+    role: UsersPermissionsMeRole
+    username: String!
+}
+
+type UsersPermissionsMeRole {
+    description: String
+    id: ID!
+    name: String!
+    type: String
+}
+
+type UsersPermissionsPasswordPayload {
+    ok: Boolean!
+}
+
+type UsersPermissionsPermission {
+    action: String!
+    createdAt: DateTime
+    role: UsersPermissionsRoleEntityResponse
+    updatedAt: DateTime
+}
+
+type UsersPermissionsPermissionEntity {
+    attributes: UsersPermissionsPermission
+    id: ID
+}
+
+type UsersPermissionsPermissionRelationResponseCollection {
+    data: [UsersPermissionsPermissionEntity!]!
+}
+
+type UsersPermissionsRole {
+    createdAt: DateTime
+    description: String
+    name: String!
+    permissions(filters: UsersPermissionsPermissionFiltersInput, pagination: PaginationArg = {}, sort: [String] = []): UsersPermissionsPermissionRelationResponseCollection
+    type: String
+    updatedAt: DateTime
+    users(filters: UsersPermissionsUserFiltersInput, pagination: PaginationArg = {}, sort: [String] = []): UsersPermissionsUserRelationResponseCollection
+}
+
+type UsersPermissionsRoleEntity {
+    attributes: UsersPermissionsRole
+    id: ID
+}
+
+type UsersPermissionsRoleEntityResponse {
+    data: UsersPermissionsRoleEntity
+}
+
+type UsersPermissionsRoleEntityResponseCollection {
+    data: [UsersPermissionsRoleEntity!]!
+    meta: ResponseCollectionMeta!
+}
+
+type UsersPermissionsUpdateRolePayload {
+    ok: Boolean!
+}
+
+type UsersPermissionsUser {
+    blocked: Boolean
+    confirmed: Boolean
+    createdAt: DateTime
+    email: String!
+    provider: String
+    role: UsersPermissionsRoleEntityResponse
+    updatedAt: DateTime
+    username: String!
+}
+
+type UsersPermissionsUserEntity {
+    attributes: UsersPermissionsUser
+    id: ID
+}
+
+type UsersPermissionsUserEntityResponse {
+    data: UsersPermissionsUserEntity
+}
+
+type UsersPermissionsUserEntityResponseCollection {
+    data: [UsersPermissionsUserEntity!]!
+    meta: ResponseCollectionMeta!
+}
+
+type UsersPermissionsUserRelationResponseCollection {
+    data: [UsersPermissionsUserEntity!]!
+}
+
+enum PublicationState {
+    LIVE
+    PREVIEW
+}
+
+"A date-time string at UTC, such as 2007-12-03T10:15:30Z, compliant with the `date-time` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar."
+scalar DateTime
+
+"A string used to identify an i18n locale"
+scalar I18NLocaleCode
+
+"The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)."
+scalar JSON
+
+"The `Upload` scalar type represents a file upload."
+scalar Upload
+
+input BooleanFilterInput {
+    and: [Boolean]
+    between: [Boolean]
+    contains: Boolean
+    containsi: Boolean
+    endsWith: Boolean
+    eq: Boolean
+    gt: Boolean
+    gte: Boolean
+    in: [Boolean]
+    lt: Boolean
+    lte: Boolean
+    ne: Boolean
+    not: BooleanFilterInput
+    notContains: Boolean
+    notContainsi: Boolean
+    notIn: [Boolean]
+    notNull: Boolean
+    null: Boolean
+    or: [Boolean]
+    startsWith: Boolean
+}
+
+input ClasseFiltersInput {
+    alliance: StringFilterInput
+    alliance_horde: StringFilterInput
+    and: [ClasseFiltersInput]
+    best_race_alliance: RaceFiltersInput
+    best_race_horde: RaceFiltersInput
+    classe: StringFilterInput
+    createdAt: DateTimeFilterInput
+    guides: GuideFiltersInput
+    horde: StringFilterInput
+    id: IDFilterInput
+    locale: StringFilterInput
+    localizations: ClasseFiltersInput
+    not: ClasseFiltersInput
+    or: [ClasseFiltersInput]
+    updatedAt: DateTimeFilterInput
+}
+
+input ClasseInput {
+    alliance: String
+    alliance_horde: String
+    best_race_alliance: ID
+    best_race_horde: ID
+    classe: String
+    guides: [ID]
+    horde: String
+    icon: ID
+}
+
+input ComponentStuffItemInput {
+    commentaire: String
+    enchant: String
+    id: ID
+    item: String
+}
+
+input DateTimeFilterInput {
+    and: [DateTime]
+    between: [DateTime]
+    contains: DateTime
+    containsi: DateTime
+    endsWith: DateTime
+    eq: DateTime
+    gt: DateTime
+    gte: DateTime
+    in: [DateTime]
+    lt: DateTime
+    lte: DateTime
+    ne: DateTime
+    not: DateTimeFilterInput
+    notContains: DateTime
+    notContainsi: DateTime
+    notIn: [DateTime]
+    notNull: Boolean
+    null: Boolean
+    or: [DateTime]
+    startsWith: DateTime
+}
+
+input FactionFiltersInput {
+    and: [FactionFiltersInput]
+    createdAt: DateTimeFilterInput
+    faction: StringFilterInput
+    guides: GuideFiltersInput
+    id: IDFilterInput
+    locale: StringFilterInput
+    localizations: FactionFiltersInput
+    not: FactionFiltersInput
+    or: [FactionFiltersInput]
+    updatedAt: DateTimeFilterInput
+}
+
+input FactionInput {
+    faction: String
+    guides: [ID]
+    icon: ID
+}
+
+input FileInfoInput {
+    alternativeText: String
+    caption: String
+    name: String
+}
+
+input FloatFilterInput {
+    and: [Float]
+    between: [Float]
+    contains: Float
+    containsi: Float
+    endsWith: Float
+    eq: Float
+    gt: Float
+    gte: Float
+    in: [Float]
+    lt: Float
+    lte: Float
+    ne: Float
+    not: FloatFilterInput
+    notContains: Float
+    notContainsi: Float
+    notIn: [Float]
+    notNull: Boolean
+    null: Boolean
+    or: [Float]
+    startsWith: Float
+}
+
+input GuideFiltersInput {
+    and: [GuideFiltersInput]
+    classe: ClasseFiltersInput
+    createdAt: DateTimeFilterInput
+    description: StringFilterInput
+    faction: FactionFiltersInput
+    id: IDFilterInput
+    locale: StringFilterInput
+    localizations: GuideFiltersInput
+    not: GuideFiltersInput
+    or: [GuideFiltersInput]
+    publishedAt: DateTimeFilterInput
+    titre: StringFilterInput
+    updatedAt: DateTimeFilterInput
+}
+
+input GuideInput {
+    bague1: ComponentStuffItemInput
+    bague2: ComponentStuffItemInput
+    bijou1: ComponentStuffItemInput
+    bijou2: ComponentStuffItemInput
+    bottes: ComponentStuffItemInput
+    brassards: ComponentStuffItemInput
+    cape: ComponentStuffItemInput
+    ceinture: ComponentStuffItemInput
+    classe: ID
+    cou: ComponentStuffItemInput
+    description: String
+    distance: ComponentStuffItemInput
+    epaule: ComponentStuffItemInput
+    faction: ID
+    gants: ComponentStuffItemInput
+    main_droite: ComponentStuffItemInput
+    main_gauche: ComponentStuffItemInput
+    pantalon: ComponentStuffItemInput
+    publishedAt: DateTime
+    tete: ComponentStuffItemInput
+    titre: String
+    torse: ComponentStuffItemInput
+}
+
+input I18NLocaleFiltersInput {
+    and: [I18NLocaleFiltersInput]
+    code: StringFilterInput
+    createdAt: DateTimeFilterInput
+    id: IDFilterInput
+    name: StringFilterInput
+    not: I18NLocaleFiltersInput
+    or: [I18NLocaleFiltersInput]
+    updatedAt: DateTimeFilterInput
+}
+
+input IDFilterInput {
+    and: [ID]
+    between: [ID]
+    contains: ID
+    containsi: ID
+    endsWith: ID
+    eq: ID
+    gt: ID
+    gte: ID
+    in: [ID]
+    lt: ID
+    lte: ID
+    ne: ID
+    not: IDFilterInput
+    notContains: ID
+    notContainsi: ID
+    notIn: [ID]
+    notNull: Boolean
+    null: Boolean
+    or: [ID]
+    startsWith: ID
+}
+
+input IntFilterInput {
+    and: [Int]
+    between: [Int]
+    contains: Int
+    containsi: Int
+    endsWith: Int
+    eq: Int
+    gt: Int
+    gte: Int
+    in: [Int]
+    lt: Int
+    lte: Int
+    ne: Int
+    not: IntFilterInput
+    notContains: Int
+    notContainsi: Int
+    notIn: [Int]
+    notNull: Boolean
+    null: Boolean
+    or: [Int]
+    startsWith: Int
+}
+
+input JSONFilterInput {
+    and: [JSON]
+    between: [JSON]
+    contains: JSON
+    containsi: JSON
+    endsWith: JSON
+    eq: JSON
+    gt: JSON
+    gte: JSON
+    in: [JSON]
+    lt: JSON
+    lte: JSON
+    ne: JSON
+    not: JSONFilterInput
+    notContains: JSON
+    notContainsi: JSON
+    notIn: [JSON]
+    notNull: Boolean
+    null: Boolean
+    or: [JSON]
+    startsWith: JSON
+}
+
+input PaginationArg {
+    limit: Int
+    page: Int
+    pageSize: Int
+    start: Int
+}
+
+input RaceFiltersInput {
+    and: [RaceFiltersInput]
+    createdAt: DateTimeFilterInput
+    id: IDFilterInput
+    locale: StringFilterInput
+    localizations: RaceFiltersInput
+    not: RaceFiltersInput
+    or: [RaceFiltersInput]
+    race: StringFilterInput
+    updatedAt: DateTimeFilterInput
+}
+
+input RaceInput {
+    image: ID
+    race: String
+}
+
+input StringFilterInput {
+    and: [String]
+    between: [String]
+    contains: String
+    containsi: String
+    endsWith: String
+    eq: String
+    gt: String
+    gte: String
+    in: [String]
+    lt: String
+    lte: String
+    ne: String
+    not: StringFilterInput
+    notContains: String
+    notContainsi: String
+    notIn: [String]
+    notNull: Boolean
+    null: Boolean
+    or: [String]
+    startsWith: String
+}
+
+input UploadFileFiltersInput {
+    alternativeText: StringFilterInput
+    and: [UploadFileFiltersInput]
+    caption: StringFilterInput
+    createdAt: DateTimeFilterInput
+    ext: StringFilterInput
+    formats: JSONFilterInput
+    hash: StringFilterInput
+    height: IntFilterInput
+    id: IDFilterInput
+    mime: StringFilterInput
+    name: StringFilterInput
+    not: UploadFileFiltersInput
+    or: [UploadFileFiltersInput]
+    previewUrl: StringFilterInput
+    provider: StringFilterInput
+    provider_metadata: JSONFilterInput
+    size: FloatFilterInput
+    updatedAt: DateTimeFilterInput
+    url: StringFilterInput
+    width: IntFilterInput
+}
+
+input UploadFileInput {
+    alternativeText: String
+    caption: String
+    ext: String
+    formats: JSON
+    hash: String
+    height: Int
+    mime: String
+    name: String
+    previewUrl: String
+    provider: String
+    provider_metadata: JSON
+    size: Float
+    url: String
+    width: Int
+}
+
+input UsersPermissionsLoginInput {
+    identifier: String!
+    password: String!
+    provider: String! = "local"
+}
+
+input UsersPermissionsPermissionFiltersInput {
+    action: StringFilterInput
+    and: [UsersPermissionsPermissionFiltersInput]
+    createdAt: DateTimeFilterInput
+    id: IDFilterInput
+    not: UsersPermissionsPermissionFiltersInput
+    or: [UsersPermissionsPermissionFiltersInput]
+    role: UsersPermissionsRoleFiltersInput
+    updatedAt: DateTimeFilterInput
+}
+
+input UsersPermissionsRegisterInput {
+    email: String!
+    password: String!
+    username: String!
+}
+
+input UsersPermissionsRoleFiltersInput {
+    and: [UsersPermissionsRoleFiltersInput]
+    createdAt: DateTimeFilterInput
+    description: StringFilterInput
+    id: IDFilterInput
+    name: StringFilterInput
+    not: UsersPermissionsRoleFiltersInput
+    or: [UsersPermissionsRoleFiltersInput]
+    permissions: UsersPermissionsPermissionFiltersInput
+    type: StringFilterInput
+    updatedAt: DateTimeFilterInput
+    users: UsersPermissionsUserFiltersInput
+}
+
+input UsersPermissionsRoleInput {
+    description: String
+    name: String
+    permissions: [ID]
+    type: String
+    users: [ID]
+}
+
+input UsersPermissionsUserFiltersInput {
+    and: [UsersPermissionsUserFiltersInput]
+    blocked: BooleanFilterInput
+    confirmationToken: StringFilterInput
+    confirmed: BooleanFilterInput
+    createdAt: DateTimeFilterInput
+    email: StringFilterInput
+    id: IDFilterInput
+    not: UsersPermissionsUserFiltersInput
+    or: [UsersPermissionsUserFiltersInput]
+    password: StringFilterInput
+    provider: StringFilterInput
+    resetPasswordToken: StringFilterInput
+    role: UsersPermissionsRoleFiltersInput
+    updatedAt: DateTimeFilterInput
+    username: StringFilterInput
+}
+
+input UsersPermissionsUserInput {
+    blocked: Boolean
+    confirmationToken: String
+    confirmed: Boolean
+    email: String
+    password: String
+    provider: String
+    resetPasswordToken: String
+    role: ID
+    username: String
+}
