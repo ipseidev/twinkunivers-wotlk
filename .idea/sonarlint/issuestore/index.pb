@@ -30,3 +30,31 @@ K
 components/layout/index.tsx,5/1/5114ea96b2c895afa99073b7b0d8535df2a38af0
 M
 styles/components/footer.scss,b/d/bdc699d1ce8c10367ca6d513b4089d00ec00fe67
+K
+components/footer/index.tsx,a/f/af3ac286ddf5c2323f7b45d57e113c8b784270b7
+<
+package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
+>
+locale_dede.js,6/c/6ce8cafe341113deb8618d546bfd53720ea16148
+>
+next.config.js,8/1/811a6d5a2e04fadb44d8eec365f2fa8af5c4facf
+>
+locale_eses.js,4/4/4448cc6c27268ca1ac046ae9eef49a6407eed076
+P
+ components/stuff/StuffButton.tsx,8/a/8a4a5324d254bd079c81064118a33cf89dd5884e
+>
+.graphqlconfig,8/d/8df006246b7f5fae48a54734e35d9a2553dee9b6
+>
+schema.graphql,1/8/1893868eb9d724a32a426856312240e1a98c3927
+D
+graphql/getGuides.ts,2/5/250ed321e6309c394d83bf3a50c77e5cf9f4ec44
+F
+graphql/getFactions.ts,b/8/b8878d4ae6fde2ba6f558956046c766f3c1b8fe0
+M
+styles/components/navbar.scss,3/5/350782fef052743d4730ac39ba351e5d24d30533
+E
+graphql/getClasses.ts,e/8/e85d91b4a2ab46c4c63d02f2cc4bf30d8cace80c
+V
+&components/carousel/CarouselClasse.tsx,e/3/e3c2adcfd7d684094ee9a5015044ac0647ad26bb
+K
+components/navbar/index.tsx,6/e/6e65188de81c60d43c1a6d251471da168ef50c94
