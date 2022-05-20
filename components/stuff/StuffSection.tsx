@@ -53,10 +53,15 @@ const StuffSection = ({guide}: any) => {
                                              commentaire={guide.main_gauche?.commentaire} side={"bottom"}
                                              linkSide={"right"}
                                 />
-                                <StuffButton item={guide.distance?.item} enchant={guide.distance?.enchant}
-                                             commentaire={guide.distance?.commentaire} side={"bottom"}
-                                             linkSide={"right"}
-                                />
+                                {
+                                    guide.distance?.item && (
+                                        <StuffButton item={guide.distance?.item} enchant={guide.distance?.enchant}
+                                                     commentaire={guide.distance?.commentaire} side={"bottom"}
+                                                     linkSide={"right"}   />
+                                    )
+                                }
+
+
                             </div>
                         </div>
                         <div className={"stuff_right-container animate__animated animate__fadeInRight"}>

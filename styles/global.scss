@@ -181,7 +181,11 @@ background-image: url("../assets/images/azeroth.png");
   &-left {
     display: flex;
     margin: 5px 0;
-
+    position: relative;
+    .stuff_item_details{
+      position: absolute;
+      left:-40px;
+    }
   }
 
   &-center {
@@ -193,6 +197,13 @@ background-image: url("../assets/images/azeroth.png");
   &-right {
     display: flex;
     margin: 5px 0;
+    position: relative;
+    .stuff_item_details{
+    position: absolute;
+    right:-30px;
+    }
+
+
   }
 }
 
