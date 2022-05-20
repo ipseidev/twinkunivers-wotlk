@@ -6,11 +6,16 @@ import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 import 'animate.css';
+import Head from "next/head";
 
 function MyApp({Component, pageProps}: AppProps) {
     return (
         <>
-
+            <Head>
+                <title>Twinkunivers</title>
+                <meta name="description" content={"Twinkunivers - Wotlk edition"} />
+                <meta name="name" content={"Twinkunivers"} />
+            </Head>
             <Script
                 id="show-banner"
                 dangerouslySetInnerHTML={{
