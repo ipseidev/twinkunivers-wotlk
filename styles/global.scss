@@ -274,3 +274,58 @@ background-image: url("../assets/images/azeroth.png");
     color: #57aad6
   }
 }
+
+.mainTitle{
+  color: white;
+  font-size: 5rem;
+  text-shadow: 0px 3px 3px #144165;
+  font-weight:bold;
+  padding:0
+}
+
+@media(max-width: 1400px){
+  .carousel_classe{
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 1024px){
+  .content_container{
+    max-width: 100% !important;
+  }
+
+  .mainTitle{
+    font-size: 2rem;
+  }
+
+  .stuff_container {
+   flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 30px;
+  }
+
+  .stuff_bottom-container{
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: auto;
+    flex-direction: column;
+    margin: 0 0;
+  }
+
+  .stuff_left-container{
+    justify-content: flex-start;
+  }
+  .stuff_right-container{
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+
+
+@media (max-width: 600px){
+  .navbar_middle_container{
+    display: none;
+  }
+}

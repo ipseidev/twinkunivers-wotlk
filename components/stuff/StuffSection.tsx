@@ -1,8 +1,11 @@
 import React from 'react';
 import StuffButton from "./StuffButton";
+import useScreenSize from "../../hooks/getScreenSize";
 
 const StuffSection = ({guide}: any) => {
+    const {width, breakMobile} = useScreenSize();
     if (!guide) return;
+
     return (
         <section>
             {
@@ -46,7 +49,7 @@ const StuffSection = ({guide}: any) => {
                         <div className={"stuff_bottom-container animate__animated animate__fadeInUp"}>
                             <StuffButton item={guide.main_droite?.item} enchant={guide.main_droite?.enchant}
                                          commentaire={guide.main_droite?.commentaire} side={"bottom"}
-                                         linkSide={"left"}
+                                         linkSide={width < breakMobile ? "right" : "left"}
                             />
                             <div>
                                 <StuffButton item={guide.main_gauche?.item} enchant={guide.main_gauche?.enchant}
@@ -66,33 +69,33 @@ const StuffSection = ({guide}: any) => {
                         </div>
                         <div className={"stuff_right-container animate__animated animate__fadeInRight"}>
                             <StuffButton item={guide.gants?.item} enchant={guide.gants?.enchant}
-                                         commentaire={guide.gants?.commentaire} side={"right"}
-                                         linkSide={"left"}
+                                         commentaire={guide.gants?.commentaire} side={width < breakMobile ? "left" : "right"}
+                                         linkSide={width < breakMobile ? "right" : "left"}
                             />
                             <StuffButton item={guide.ceinture?.item} enchant={guide.ceinture?.enchant}
                                          commentaire={guide.ceinture?.commentaire}
-                                         side={"right"}
-                                         linkSide={"left"}
+                                         side={width < breakMobile ? "left" : "right"}
+                                         linkSide={width < breakMobile ? "right" : "left"}
                             />
                             <StuffButton item={guide.pantalon?.item} enchant={guide.pantalon?.enchant}
-                                         commentaire={guide.pantalon?.commentaire} side={"right"}
-                                         linkSide={"left"}
+                                         commentaire={guide.pantalon?.commentaire} side={width < breakMobile ? "left" : "right"}
+                                         linkSide={width < breakMobile ? "right" : "left"}
                             />
                             <StuffButton item={guide.bottes?.item} enchant={guide.bottes?.enchant}
-                                         commentaire={guide.bottes?.commentaire} side={"right"}
-                                         linkSide={"left"}
+                                         commentaire={guide.bottes?.commentaire} side={width < breakMobile ? "left" : "right"}
+                                         linkSide={width < breakMobile ? "right" : "left"}
                             />
-                            <StuffButton item={guide.bague1?.item} side={"right"}
-                                         linkSide={"left"}
+                            <StuffButton item={guide.bague1?.item} side={width < breakMobile ? "left" : "right"}
+                                         linkSide={width < breakMobile ? "right" : "left"}
                             />
-                            <StuffButton item={guide.bague2?.item} side={"right"}
-                                         linkSide={"left"}
+                            <StuffButton item={guide.bague2?.item} side={width < breakMobile ? "left" : "right"}
+                                         linkSide={width < breakMobile ? "right" : "left"}
                             />
-                            <StuffButton item={guide.bijou1?.item} side={"right"}
-                                         linkSide={"left"}
+                            <StuffButton item={guide.bijou1?.item} side={width < breakMobile ? "left" : "right"}
+                                         linkSide={width < breakMobile ? "right" : "left"}
                             />
-                            <StuffButton item={guide.bijou2?.item} side={"right"}
-                                         linkSide={"left"}
+                            <StuffButton item={guide.bijou2?.item} side={width < breakMobile ? "left" : "right"}
+                                         linkSide={width < breakMobile ? "right" : "left"}
                             />
                         </div>
                     </div>

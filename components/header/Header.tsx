@@ -8,14 +8,8 @@ const Header = ({classes, setClasseActiveAndSetQuery, classeActive, lang, setLan
             <Navbar lang={lang} setLang={setLang}/>
             <div className={"homepage_header_background"}>
                 <div  style={{display:"flex", alignItems:"flex-end", justifyContent:"center", flexDirection:"column",position:"relative"}}>
-                    <h1 style={{
-                        color: "white",
-                        fontSize: "5rem",
-                        textShadow: "0px 3px 3px #144165",
-                        fontWeight:"bold",
-                        padding:0
-                    }}
-                    className={"animate__animated animate__fadeInLeft"}
+                    <h1
+                    className={"animate__animated animate__fadeInLeft mainTitle"}
                     >Twinkunivers</h1>
                     <h3
                         className={"animate__animated animate__fadeInRight"}

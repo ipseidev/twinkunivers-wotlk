@@ -6,9 +6,13 @@ import SwiperCore, { Navigation, Pagination} from "swiper";
 
 
 import clsx from "clsx";
+import useScreenSize from "../../hooks/getScreenSize";
 SwiperCore.use([Navigation, Pagination]);
 
 const CarouselClasse = ({classes, selectClasse, classeActive}: any) => {
+    const {width, breakMobile} = useScreenSize();
+
+
     return (
         <section className={"carousel_classe_container"} id={"classes"}>
             <div className={"carousel_classe"}>
@@ -18,7 +22,7 @@ const CarouselClasse = ({classes, selectClasse, classeActive}: any) => {
                     pagination={{ clickable: true }}
                     onSwiper={(swiper) => console.log(swiper)}
                     onSlideChange={() => console.log('slide change')}
-                    slidesPerView={9}
+                    slidesPerView={width < breakMobile ? 3 : 9}
                     style={{height: "100%"}}
 
                 >

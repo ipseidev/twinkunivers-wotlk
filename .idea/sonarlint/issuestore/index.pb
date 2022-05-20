@@ -46,7 +46,5 @@ M
 styles/components/navbar.scss,3/5/350782fef052743d4730ac39ba351e5d24d30533
 E
 graphql/getClasses.ts,e/8/e85d91b4a2ab46c4c63d02f2cc4bf30d8cace80c
-V
-&components/carousel/CarouselClasse.tsx,e/3/e3c2adcfd7d684094ee9a5015044ac0647ad26bb
 K
 components/navbar/index.tsx,6/e/6e65188de81c60d43c1a6d251471da168ef50c94
