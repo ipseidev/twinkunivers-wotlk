@@ -13,8 +13,20 @@ function MyApp({Component, pageProps}: AppProps) {
         <>
             <Head>
                 <title>Twinkunivers</title>
-                <meta name="description" content={"Twinkunivers - Wotlk edition"} />
-                <meta name="name" content={"Twinkunivers"} />
+                <meta name="title" content="Twinkunivers"/>
+                <meta name="description" content="Twinkunivers - Wotlk edition"/>
+
+                <meta property="og:type" content="website"/>
+                <meta property="og:url" content="https://www.twinkunivers.com/"/>
+                <meta property="og:title" content="Twinkunivers"/>
+                <meta property="og:description" content="Twinkunivers - Wotlk edition"/>
+                <meta property="og:image" content="/assets/background2.png"/>
+
+                <meta property="twitter:card" content="summary_large_image"/>
+                <meta property="twitter:url" content="https://www.twinkunivers.com/"/>
+                <meta property="twitter:title" content="Twinkunivers"/>
+                <meta property="twitter:description" content="Twinkunivers - Wotlk edition"/>
+                <meta property="twitter:image" content="/assets/background2.png"/>
             </Head>
             <Script
                 id="show-banner"
