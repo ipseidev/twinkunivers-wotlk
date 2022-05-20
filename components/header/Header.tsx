@@ -8,13 +8,25 @@ const Header = ({classes, setClasseActiveAndSetQuery, classeActive, lang, setLan
 
             <Navbar lang={lang} setLang={setLang}/>
             <div className={"homepage_header_background"}>
-                <div  style={{display:"flex", alignItems:"flex-end", justifyContent:"center", flexDirection:"column",position:"relative"}}>
+                <div style={{
+                    display: "flex",
+                    alignItems: "flex-end",
+                    justifyContent: "center",
+                    flexDirection: "column",
+                    position: "relative"
+                }}>
                     <h1
-                    className={"animate__animated animate__fadeInLeft mainTitle"}
+                        className={"animate__animated animate__fadeInLeft mainTitle"}
                     >Twinkunivers</h1>
                     <h3
                         className={"animate__animated animate__fadeInRight"}
-                        style={{color: "#00CAE2", fontSize: "2rem", textShadow: "3px 3px 3px black", position:"absolute", top:90}}>WOTLK
+                        style={{
+                            color: "#00CAE2",
+                            fontSize: "2rem",
+                            textShadow: "3px 3px 3px black",
+                            position: "absolute",
+                            top: 90
+                        }}>WOTLK
                         edition</h3>
                 </div>
 
@@ -25,12 +37,13 @@ const Header = ({classes, setClasseActiveAndSetQuery, classeActive, lang, setLan
             <div className={"video-background"}>
 
 
-                <iframe  width={"100%"}
-                         height={"100%"}
-                         src="https://www.youtube.com/embed/sGDDqpcjPvQ?controls=0&autoplay=1&mute=1&loop=1"
+                <iframe width={"100%"}
+                        height={"100%"}
+                        src="https://www.youtube.com/embed/sGDDqpcjPvQ?playlist=sGDDqpcjPvQ&controls=0&autoplay=1&mute=1&loop=1"
                         title="YouTube video player" frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen />
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; loop;"
+                        allowFullScreen
+                />
 
             </div>
         </header>
