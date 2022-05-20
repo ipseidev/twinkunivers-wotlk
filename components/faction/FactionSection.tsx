@@ -8,7 +8,7 @@ const FactionSection = ({classeActive, factions, setClasseFactionAndSetQuery, fa
         <section className={"faction_content_container"}>
             <div className={"faction_content animate__animated animate__fadeInDown"}>
                 {
-                    classeActive ? factions.sort((factionA: any, factionB: any) => factionA.id - factionB.id).map((faction: any) => {
+                    classeActive ? factions.sort((factionA: any, factionB: any) => factionA.ordre - factionB.ordre).map((faction: any) => {
                         if(faction) {
 
 

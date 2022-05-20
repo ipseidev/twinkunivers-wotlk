@@ -102,7 +102,7 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
     return (
         <>
             <Script
-                src={`https://www.erosmosis.fr/test2.js?lang=${router.query?.lang}`}
+                src={`https://www.erosmosis.fr/test2.js?lang=${router.query?.lang ? router.query.lang : "fr"}`}
             />
             <main>
                 <Header classes={classes} setClasseActiveAndSetQuery={setClasseActiveAndSetQuery}
