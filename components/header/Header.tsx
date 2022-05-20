@@ -5,6 +5,7 @@ import Navbar from "../navbar";
 const Header = ({classes, setClasseActiveAndSetQuery, classeActive, lang, setLang}: any) => {
     return (
         <header className={"homepage_header"}>
+
             <Navbar lang={lang} setLang={setLang}/>
             <div className={"homepage_header_background"}>
                 <div  style={{display:"flex", alignItems:"flex-end", justifyContent:"center", flexDirection:"column",position:"relative"}}>
@@ -21,6 +22,17 @@ const Header = ({classes, setClasseActiveAndSetQuery, classeActive, lang, setLan
             </div>
             <CarouselClasse classes={classes} selectClasse={setClasseActiveAndSetQuery}
                             classeActive={classeActive}/>
+            <div className={"video-background"}>
+
+
+                <iframe  width={"100%"}
+                         height={"100%"}
+                         src="https://www.youtube.com/embed/sGDDqpcjPvQ?controls=0&autoplay=1&mute=1"
+                        title="YouTube video player" frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen />
+
+            </div>
         </header>
     );
 };

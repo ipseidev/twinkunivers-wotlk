@@ -42,9 +42,5 @@ D
 graphql/getGuides.ts,2/5/250ed321e6309c394d83bf3a50c77e5cf9f4ec44
 F
 graphql/getFactions.ts,b/8/b8878d4ae6fde2ba6f558956046c766f3c1b8fe0
-M
-styles/components/navbar.scss,3/5/350782fef052743d4730ac39ba351e5d24d30533
 E
 graphql/getClasses.ts,e/8/e85d91b4a2ab46c4c63d02f2cc4bf30d8cace80c
-K
-components/navbar/index.tsx,6/e/6e65188de81c60d43c1a6d251471da168ef50c94
