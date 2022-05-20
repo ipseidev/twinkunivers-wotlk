@@ -27,21 +27,22 @@ function MyApp({Component, pageProps}: AppProps) {
                 <meta property="twitter:title" content="Twinkunivers"/>
                 <meta property="twitter:description" content="Twinkunivers - Wotlk edition"/>
                 <meta property="twitter:image" content="https://twinkunivers.com/assets/background2.png"/>
-                <Script async src="https://www.googletagmanager.com/gtag/js?id=UA-141355193-1"/>
-                <Script>
-                    {
-                        `
+
+
+            </Head>
+            <Script async src="https://www.googletagmanager.com/gtag/js?id=UA-141355193-1"/>
+            <Script>
+                {
+                    `
                            window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
 
                     gtag('config', 'UA-141355193-1'); 
                         `
-                    }
+                }
 
-                </Script>
-
-            </Head>
+            </Script>
             <Script
                 id="show-banner"
                 dangerouslySetInnerHTML={{
