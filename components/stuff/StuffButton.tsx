@@ -2,7 +2,7 @@ import React from 'react';
 import StuffImage from "./StuffImage";
 import StuffCommentaire from "./StuffCommentaire";
 
-const StuffButton = ({enchant, item, commentaire, side, ring1, ring2, bijou1, bijou2}: any) => {
+const StuffButton = ({enchant, item, commentaire, side, linkSide}: any) => {
     const getItemBySide = () => {
         switch (side) {
             case "left":
@@ -10,47 +10,37 @@ const StuffButton = ({enchant, item, commentaire, side, ring1, ring2, bijou1, bi
                     <div className={'stuff_item_container-left'}>
                         <div className={'stuff_item_details'}>
                             {commentaire && <StuffCommentaire commentaire={commentaire}/>}
-                            {enchant && <StuffImage item={enchant} size={'medium'}/>}
                         </div>
-                        {<StuffImage item={item} size={'large'}/>}
+                        {<StuffImage item={item} size={'large'} enchant={enchant} linkSide={linkSide}/>}
                     </div>
                 );
             case "right":
                 return (
                     <div className={'stuff_item_container-right'}>
-                        {<StuffImage item={item} size={'large'}/>}
+                        {<StuffImage item={item} size={'large'} enchant={enchant} linkSide={linkSide}/>}
                         <div className={'stuff_item_details'}>
                             {commentaire && <StuffCommentaire commentaire={commentaire}/>}
-                            {enchant && <StuffImage item={enchant} size={'medium'}/>}
                         </div>
                     </div>)
             case "bottom":
                 return (
-                    <div className={'stuff_item_container-bottom'}>
-                        <div className={'stuff_item_details'}>
-                            {<StuffImage item={item} size={'large'}/>}
-                        </div>
-                        {commentaire && <StuffCommentaire commentaire={commentaire}/>}
-                        {enchant && <StuffImage item={enchant} size={'medium'}/>}
+                    <div className={`stuff_item_container-bottom-${linkSide}`}>
+                        {<StuffImage item={item} size={'large'} enchant={enchant} linkSide={linkSide}/>}
+
+                        {commentaire && (
+                            <div className={'stuff_item_details'}>
+                                <StuffCommentaire commentaire={commentaire}/>
+                            </div>
+                        )
+                        }
 
                     </div>)
-            case "ring":
-                return (
-                    <div className={'stuff_item_container-right'}>
-                        {<StuffImage item={ring1} size={'large'}/>}
-                        {<StuffImage item={ring2} size={'large'}/>}
-                    </div>)
-            case "bijou":
-                return (
-                    <div className={'stuff_item_container-right'}>
-                        {<StuffImage item={bijou1} size={'large'}/>}
-                        {<StuffImage item={bijou2} size={'large'}/>}
-                    </div>)
+
             default:
                 return (
                     <div className={'stuffItem_containerLeft'}>
                         <div>
-                            {enchant && <StuffImage item={enchant} size={'medium'}/>}
+                            {enchant && <StuffImage item={enchant} size={'medium'} linkSide={linkSide}/>}
                             {commentaire && <StuffCommentaire commentaire={commentaire}/>}
                         </div>
                         {<StuffImage item={item} size={'large'}/>}

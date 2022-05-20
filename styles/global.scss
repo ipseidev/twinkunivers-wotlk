@@ -76,6 +76,28 @@ background-image: url("../assets/images/azeroth.png");
 }
 
 
+.enchant_container{
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+}
+
+
+.icon_links_container{
+
+  &-right{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-left{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .icon_stuff {
   display: flex;
   align-items: center;
@@ -116,7 +138,9 @@ background-image: url("../assets/images/azeroth.png");
   justify-content: space-around;
   align-items: flex-end;
   margin: 50px 0;
-  padding: 50px 0;
+  padding-top: 50px;
+  padding-bottom: 150px;
+
   border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
 }
 
@@ -157,6 +181,7 @@ background-image: url("../assets/images/azeroth.png");
   &-left {
     display: flex;
     margin: 5px 0;
+
   }
 
   &-center {
@@ -175,14 +200,14 @@ background-image: url("../assets/images/azeroth.png");
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 .stuff_right-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: flex-end;
 }
 
 .stuff_bottom-container {
@@ -191,7 +216,7 @@ background-image: url("../assets/images/azeroth.png");
   justify-content: center;
   align-items: flex-start;
   height: 110px;
-  margin-bottom: -50px;
+  margin-bottom: -100px;
 }
 
 .stuff_item_details {
@@ -203,6 +228,20 @@ background-image: url("../assets/images/azeroth.png");
 }
 
 
+.stuff_item_container-bottom-right{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+.align-right{
+  text-align: right;
+}
+
+.align-left{
+  text-align: left;
+}
 
 .article_content{
   h1{

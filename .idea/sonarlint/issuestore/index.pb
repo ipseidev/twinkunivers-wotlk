@@ -12,12 +12,6 @@ H
 next-env.d.ts,7/9/7948598afd6f2aa542f1b55d7b6f077a70937e77
 @
 appolo-client.ts,4/d/4d63793e8ef16fec3cb7d088de5c94ab43a654c6
-O
-components/stuff/StuffImage.tsx,7/4/74ce4b0e94bb782b97b054c49313f88f9f0a382e
-B
-tailwind.config.js,0/9/0918cbb76f2c44f223706cec9d31a32cd1177ce4
-K
-styles/components/font.scss,f/9/f9b6c30f99ee89195bd12fbcf2a1e1da035b581b
 L
 styles/components/index.scss,a/6/a6998e75716847d0d525a51011f4b9781cb08442
 M
@@ -40,8 +34,6 @@ K
 next.config.js,8/1/811a6d5a2e04fadb44d8eec365f2fa8af5c4facf
 >
 locale_eses.js,4/4/4448cc6c27268ca1ac046ae9eef49a6407eed076
-P
- components/stuff/StuffButton.tsx,8/a/8a4a5324d254bd079c81064118a33cf89dd5884e
 >
 .graphqlconfig,8/d/8df006246b7f5fae48a54734e35d9a2553dee9b6
 >
