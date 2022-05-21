@@ -29,8 +29,6 @@ K
 >
 locale_dede.js,6/c/6ce8cafe341113deb8618d546bfd53720ea16148
 >
-next.config.js,8/1/811a6d5a2e04fadb44d8eec365f2fa8af5c4facf
->
 locale_eses.js,4/4/4448cc6c27268ca1ac046ae9eef49a6407eed076
 >
 .graphqlconfig,8/d/8df006246b7f5fae48a54734e35d9a2553dee9b6

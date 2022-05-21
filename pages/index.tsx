@@ -21,7 +21,7 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
     const [classeActive, setClasseActive] = React.useState(0);
     const [factionActive, setFactionActive] = React.useState(0);
     const [idBuildActif, setIdBuildActif] = React.useState(0);
-    const [lang, setLang] = React.useState("fr")
+    const [lang, setLang] = React.useState(router.locale)
     const [guide, setGuide] = React.useState<any>();
     const scrollRef = React.useRef();
 
@@ -58,9 +58,13 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
         if (router.query?.build) {
             setIdBuildActif(router.query?.build)
         }
+        if (router.locale) {
+            setLang(router.locale)
+        }
         if (router.query?.lang) {
             setLang(router.query?.lang)
         }
+
     }, [])
 
     React.useEffect(() => {
@@ -102,7 +106,7 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
     return (
         <>
             <Script
-                src={`https://www.erosmosis.fr/test2.js?lang=${router.query?.lang ? router.query.lang : "fr"}`}
+                src={`https://www.erosmosis.fr/test2.js?lang=${router.query?.lang ? router.query.lang : router.locale}`}
             />
             <main>
                 <Header classes={classes} setClasseActiveAndSetQuery={setClasseActiveAndSetQuery}

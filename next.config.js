@@ -5,7 +5,7 @@ const nextConfig = {
     domains: ['twinkunivers.com', 'twinkunivers.s3.eu-west-3.amazonaws.com']
   },
   i18n: {
-    locales: ['en-US', 'fr'],
+    locales: ['en', 'fr', 'es', 'de'],
     defaultLocale: 'fr'
   }
 }
