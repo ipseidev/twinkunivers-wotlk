@@ -34,7 +34,7 @@ const Header = ({classes, setClasseActiveAndSetQuery, classeActive, lang, setLan
             </div>
             <CarouselClasse classes={classes} selectClasse={setClasseActiveAndSetQuery}
                             classeActive={classeActive}/>
-            <div className={"video-backgrund"}>
+            <div className={"video-background"}>
 
 
                 {/*<iframe width={"100%"}*/}
