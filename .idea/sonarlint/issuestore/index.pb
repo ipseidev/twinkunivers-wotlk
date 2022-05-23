@@ -62,3 +62,11 @@ G
 hooks/getScreenSize.tsx,0/d/0d9128a13316e5b490da3774288afbeaeef1c4ce
 Q
 !components/stuff/StuffSection.tsx,0/a/0a6b44706a7791090a2dfab3fe02c9c96be42e20
+V
+&components/carousel/CarouselClasse.tsx,e/3/e3c2adcfd7d684094ee9a5015044ac0647ad26bb
+M
+styles/components/header.scss,6/a/6af8874f783e8ac883f90e838d9a6eefb5fcec44
+@
+appolo-client.ts,4/d/4d63793e8ef16fec3cb7d088de5c94ab43a654c6
+>
+pages/_app.tsx,5/5/550528cc072fa7d76d123e2f4303d4ab39daa8e8

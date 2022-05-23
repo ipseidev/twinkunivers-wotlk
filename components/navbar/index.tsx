@@ -31,7 +31,7 @@ const Navbar = (lang :any) => {
 
                         </ul>
                         <select style={{background: "transparent"}} onChange={(value) => {
-                            location.href = `https://twinkunivers-wotlk.vercel.app/?lang=${value.target.value}`;
+                            location.href = `https://www.twinkunivers.com/?lang=${value.target.value}`;
                         }} value={lang.lang}>
                             <option value={"fr"} style={{color: lang === "fr" ? "white" : "black"}}>FR</option>
                             <option value={"en"} style={{color: lang === "en" ? "white" : "black"}}>EN</option>
