@@ -98,9 +98,12 @@ const Home: NextPage = ({classes, factions, guides}: any) => {
     }
 
     const setBuildActifAndSetQuery = async (id: number) => {
-        setIdBuildActif(id);
-        router.query.build = `${id}`;
-        await router.push(router, router, {shallow: true});
+        setIdBuildActif(0);
+        setTimeout(async () => {
+            setIdBuildActif(id);
+            router.query.build = `${id}`;
+            await router.push(router, router, {shallow: true});
+        }, 1)
     }
 
     return (
